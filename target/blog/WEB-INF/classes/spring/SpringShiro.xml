@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+     ">
+    <!-- shiro的核心配置:  配置shiroFileter id名必须与web.xml中的filtername保持一致 -->
+    <!-- 配置shiro的过滤器工厂类，id- shiroFilter要和我们在web.xml中配置的过滤器一致 -->
+    <bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
+        <!-- 调用我们配置的权限管理器 -->
+        <property name="securityManager" ref="securityManager"/>
+        <property name="filters">
+            <map>
+                <entry key="keton" value-ref="tokenYesOrNo"/>
+            </map>
+        </property>
+        <!-- 权限配置 -->
+        <property name="filterChainDefinitions">
+            <value>
+                /message/**=keton
+                /** =anon
+            </value>
+        </property>
+    </bean>
+
+    <!-- 安全管理器  缓存技术: 缓存管理 realm:负责获取处理数据-->
+    <bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
+        <property name="realm" ref="userRealm"/>
+        <!-- 使用下面配置的缓存管理器 -->
+        <!--<property name="cacheManager" ref="cacheManager"/>-->
+<!--        <property name="sessionManager" ref="sessionManager"/>-->
+    </bean>
+
+    <!-- 注册自定义的Realm，并把密码匹配器注入，使用注解的方式自动注解会无法正确匹配密码 -->
+    <bean id="userRealm" class="util.UserRealm">
+        <!--是否开启缓存-->
+        <property name="cachingEnabled" value="true"/>
+        <!--是否开启认证缓存-->
+        <property name="authenticationCachingEnabled" value="true"></property>
+        <!--是否开启授权缓存-->
+        <property name="authorizationCachingEnabled" value="true"></property>
+        <!-- 配置缓存管理器-->
+        <!--<property name="cacheManager" ref="cacheManager" />-->
+        <property name="cacheManager" ref="shiroRedisCacheManager" />
+        <!--&lt;!&ndash; 配置加密器 &ndash;&gt;-->
+        <!-- <property name="credentialsMatcher" ref="passwordMatcher"/>  -->
+    </bean>
+
+    <!--缓存管理器   使用缓存可以避免需要授权信息时频繁的调用数据库查询的问题-->
+    <!--使用缓存管理器 还需要将该缓存管理器加入到securityManager安全管理器-->
+    <!--这里使用的是Shiro默认使用EhCache缓存管理器，除此之外还可以使用ehcache、redis缓存管理-->
+    <!--<bean id="cacheManager" class="org.apache.shiro.cache.MemoryConstrainedCacheManager"/>-->
+
+    <!-- 必须配置lifecycleBeanPostProcessor:管理shiro中常见的对象 -->
+    <!-- 保证实现了Shiro内部lifecycle函数的bean执行 -->
+    <bean id="lifecycleBeanPostProcessor" class="org.apache.shiro.spring.LifecycleBeanPostProcessor"/>
+
+
+
+    <bean id="shiroRedisCacheManager" class="cache.shiroCache.ShiroRedisCacheManager">
+        <!--<constructor-arg ref="jedisConnectionFactory"/>-->
+        <constructor-arg index="0">
+            <ref bean="jedisConnectionFactory"></ref>
+        </constructor-arg>
+        <constructor-arg index="1">
+            <ref bean="redisTemplate"></ref>
+        </constructor-arg>
+    </bean>
+
+
+    <bean id="tokenYesOrNo" class="filter.TokenAccessControlFilter"/>
+
+</beans>

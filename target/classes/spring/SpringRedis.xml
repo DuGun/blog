@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xmlns:cache="http://www.springframework.org/schema/cache"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+    http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache.xsd">
+
+    <!-- 启用缓存注解功能，这个是必须的，否则注解不会生效，另外，该注解一定要声明在spring主配置文件中才会生效 -->
+    <!--<cache:annotation-driven cache-manager="redisCacheManager"/>-->
+<!--    <cache:annotation-driven cache-manager="redisCacheManager"/>-->
+    <!-- redis数据源 -->
+    <bean id="jedisPoolConfig" class="redis.clients.jedis.JedisPoolConfig">
+        <!-- 最大空闲数 -->
+        <property name="maxIdle" value="400"/>
+        <!-- 最大空连接数 -->
+        <property name="maxTotal" value="6000"/>
+        <!-- 最大等待时间 -->
+        <property name="maxWaitMillis" value="1000"/>
+        <!-- 连接超时时是否阻塞，false时报异常,ture阻塞直到超时, 默认true -->
+        <property name="blockWhenExhausted" value="true"/>
+        <!-- 返回连接时，检测连接是否成功 -->
+        <property name="testOnBorrow" value="true"/>
+    </bean>
+
+    <!-- Spring-redis连接池管理工厂 -->
+    <bean id="jedisConnectionFactory" class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory">
+        <!-- IP地址 -->
+        <property name="hostName" value="47.107.76.81"/>
+        <!-- 端口号 -->
+        <property name="port" value="6379"/>
+        <!-- 超时时间 默认2000-->
+        <property name="timeout" value="10000"/>
+        <!-- 连接池配置引用 -->
+        <property name="poolConfig" ref="jedisPoolConfig"/>
+        <!-- usePool：是否使用连接池 -->
+        <property name="usePool" value="true"/>
+    </bean>
+
+
+    <!-- Spring中Redis模板 -->
+    <bean id="redisTemplate" class="org.springframework.data.redis.core.RedisTemplate">
+        <!--&lt;!&ndash;Redis连接池&ndash;&gt;-->
+        <property name="connectionFactory" ref="jedisConnectionFactory"/>
+        <!--设置默认序列化器 且开启启用默认序列化器-->
+<!--        <property name="enableDefaultSerializer" value="true"/>-->
+<!--        <property name="defaultSerializer">-->
+<!--            <bean class="org.springframework.data.redis.serializer.GenericJackson2JsonRedisSerializer"/>-->
+<!--        </property>-->
+        <!--Key序列化器 对于普通K-V操作时，key采取的序列化策略-->
+        <!--<property name="keySerializer">-->
+        <!--<bean class="org.springframework.data.redis.serializer.StringRedisSerializer" />-->
+        <!--</property>-->
+        <!--&lt;!&ndash;Value序列化器 value采取的序列化策略&ndash;&gt;-->
+        <!--<property name="valueSerializer">-->
+        <!--<bean class="org.springframework.data.redis.serializer.JdkSerializationRedisSerializer" />-->
+        <!--</property>-->
+        <!--&lt;!&ndash;hashKey序列化器 在hash数据结构中，hash-key的序列化策略&ndash;&gt;-->
+        <!--<property name="hashKeySerializer">-->
+        <!--<bean class="org.springframework.data.redis.serializer.StringRedisSerializer" />-->
+        <!--</property>-->
+        <!--&lt;!&ndash;HashValue序列化器 hash-value的序列化策略&ndash;&gt;-->
+        <!--<property name="hashValueSerializer">-->
+        <!--<bean class="org.springframework.data.redis.serializer.JdkSerializationRedisSerializer" />-->
+        <!--</property>-->
+        <!--开启事务  -->
+        <property name="enableTransactionSupport" value="true"></property>
+    </bean>
+
+
+    <!-- spring自己的管理器 -->
+<!--    <bean id="redisCacheManager" class="org.springframework.cache.support.SimpleCacheManager">-->
+<!--        <property name="caches">-->
+<!--            <set>-->
+<!--                &lt;!&ndash;可以配置多个Cache 使用时建议在使用注解中进行所使用的Cache&ndash;&gt;-->
+<!--                <bean class="cache.shiro.SpringRedisCache">-->
+<!--                    <property name="name" value="myRedisCache"></property>-->
+<!--                    <property name="redisTemplate" ref="redisTemplate"></property>-->
+<!--                </bean>-->
+
+<!--                <bean class="cache.springCache.ShiroRedisCache2">-->
+<!--                    <property name="name" value="myRedisCache2"></property>-->
+<!--                    <property name="redisTemplate" ref="redisTemplate"></property>-->
+<!--                </bean>-->
+
+
+<!--            </set>-->
+<!--        </property>-->
+<!--    </bean>-->
+
+</beans>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.BloggerMapper">
+  <resultMap id="BaseResultMap" type="bean.Blogger">
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="bogger_name" jdbcType="VARCHAR" property="boggerName" />
+    <result column="head" jdbcType="VARCHAR" property="head" />
+    <result column="contact" jdbcType="VARCHAR" property="contact" />
+  </resultMap>
+  <insert id="insert" parameterType="bean.Blogger">
+    insert into blogger (password, bogger_name, head, 
+      contact)
+    values (#{password,jdbcType=VARCHAR}, #{boggerName,jdbcType=VARCHAR}, #{head,jdbcType=VARCHAR}, 
+      #{contact,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="bean.Blogger">
+    insert into blogger
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="password != null">
+        password,
+      </if>
+      <if test="boggerName != null">
+        bogger_name,
+      </if>
+      <if test="head != null">
+        head,
+      </if>
+      <if test="contact != null">
+        contact,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="password != null">
+        #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="boggerName != null">
+        #{boggerName,jdbcType=VARCHAR},
+      </if>
+      <if test="head != null">
+        #{head,jdbcType=VARCHAR},
+      </if>
+      <if test="contact != null">
+        #{contact,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+</mapper>

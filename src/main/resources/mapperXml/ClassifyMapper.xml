@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.ClassifyMapper">
+  <resultMap id="BaseResultMap" type="bean.Classify">
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="article_sum" jdbcType="INTEGER" property="articleSum" />
+    <result column="read_sum" jdbcType="INTEGER" property="readSum" />
+    <result column="comments_sum" jdbcType="INTEGER" property="commentsSum" />
+    <result column="classify_name" jdbcType="VARCHAR" property="classifyName" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, article_sum, read_sum, comments_sum, classify_name
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from classify
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from classify
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="bean.Classify">
+    insert into classify (id, article_sum, read_sum, 
+      comments_sum, classify_name)
+    values (#{id,jdbcType=VARCHAR}, #{articleSum,jdbcType=INTEGER}, #{readSum,jdbcType=INTEGER}, 
+      #{commentsSum,jdbcType=INTEGER}, #{classifyName,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="bean.Classify">
+    insert into classify
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="articleSum != null">
+        article_sum,
+      </if>
+      <if test="readSum != null">
+        read_sum,
+      </if>
+      <if test="commentsSum != null">
+        comments_sum,
+      </if>
+      <if test="classifyName != null">
+        classify_name,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=VARCHAR},
+      </if>
+      <if test="articleSum != null">
+        #{articleSum,jdbcType=INTEGER},
+      </if>
+      <if test="readSum != null">
+        #{readSum,jdbcType=INTEGER},
+      </if>
+      <if test="commentsSum != null">
+        #{commentsSum,jdbcType=INTEGER},
+      </if>
+      <if test="classifyName != null">
+        #{classifyName,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="bean.Classify">
+    update classify
+    <set>
+      <if test="articleSum != null">
+        article_sum = #{articleSum,jdbcType=INTEGER},
+      </if>
+      <if test="readSum != null">
+        read_sum = #{readSum,jdbcType=INTEGER},
+      </if>
+      <if test="commentsSum != null">
+        comments_sum = #{commentsSum,jdbcType=INTEGER},
+      </if>
+      <if test="classifyName != null">
+        classify_name = #{classifyName,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="bean.Classify">
+    update classify
+    set article_sum = #{articleSum,jdbcType=INTEGER},
+      read_sum = #{readSum,jdbcType=INTEGER},
+      comments_sum = #{commentsSum,jdbcType=INTEGER},
+      classify_name = #{classifyName,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+</mapper>
