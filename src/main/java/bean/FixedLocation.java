@@ -1,6 +1,6 @@
 package bean;
 
-public class FixedLocationKey {
+public class FixedLocation {
     private String name;
 
     private String nameAs;

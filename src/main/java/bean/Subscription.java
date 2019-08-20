@@ -1,9 +1,9 @@
 package bean;
 
-public class SubscriptionKey {
+public class Subscription {
     private String email;
 
-    private String articleId;
+    private long articleId;
 
     public String getEmail() {
         return email;
@@ -13,11 +13,11 @@ public class SubscriptionKey {
         this.email = email == null ? null : email.trim();
     }
 
-    public String getArticleId() {
+    public long getArticleId() {
         return articleId;
     }
 
-    public void setArticleId(String articleId) {
-        this.articleId = articleId == null ? null : articleId.trim();
+    public void setArticleId(long articleId) {
+        this.articleId = articleId;
     }
 }

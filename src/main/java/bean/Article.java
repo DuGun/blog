@@ -3,9 +3,9 @@ package bean;
 import java.util.Date;
 
 public class Article {
-    private String id;
+    private long id;
 
-    private String classifyId;
+    private long classifyId;
 
     private String title;
 
@@ -13,30 +13,30 @@ public class Article {
 
     private Date time;
 
-    private Integer readSum;
+    private int readSum;
 
-    private Integer commentsSum;
+    private int commentsSum;
 
-    private Integer status;
+    private int status;
 
     private String imgUrl;
 
-    private Integer good;
+    private int good;
 
-    public String getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(String id) {
-        this.id = id == null ? null : id.trim();
+    public void setId(long id) {
+        this.id = id;
     }
 
-    public String getClassifyId() {
+    public long getClassifyId() {
         return classifyId;
     }
 
-    public void setClassifyId(String classifyId) {
-        this.classifyId = classifyId == null ? null : classifyId.trim();
+    public void setClassifyId(long classifyId) {
+        this.classifyId = classifyId;
     }
 
     public String getTitle() {
@@ -63,27 +63,27 @@ public class Article {
         this.time = time;
     }
 
-    public Integer getReadSum() {
+    public int getReadSum() {
         return readSum;
     }
 
-    public void setReadSum(Integer readSum) {
+    public void setReadSum(int readSum) {
         this.readSum = readSum;
     }
 
-    public Integer getCommentsSum() {
+    public int getCommentsSum() {
         return commentsSum;
     }
 
-    public void setCommentsSum(Integer commentsSum) {
+    public void setCommentsSum(int commentsSum) {
         this.commentsSum = commentsSum;
     }
 
-    public Integer getStatus() {
+    public int getStatus() {
         return status;
     }
 
-    public void setStatus(Integer status) {
+    public void setStatus(int status) {
         this.status = status;
     }
 
@@ -95,11 +95,11 @@ public class Article {
         this.imgUrl = imgUrl == null ? null : imgUrl.trim();
     }
 
-    public Integer getGood() {
+    public int getGood() {
         return good;
     }
 
-    public void setGood(Integer good) {
+    public void setGood(int good) {
         this.good = good;
     }
 }

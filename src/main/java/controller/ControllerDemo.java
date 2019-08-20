@@ -1,13 +1,10 @@
 package controller;
 
-import org.junit.Test;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import service.CeShi;
 import util.ResponseBean;
+import util.SnowFlake;
 
 import javax.annotation.Resource;
 import java.util.Arrays;
@@ -38,11 +35,15 @@ public class ControllerDemo {
         return  responseBean;
     }
 
+
+
     @GetMapping("message/test")
     @ResponseBody
     public String show2(){
 
+        SnowFlake snowFlake = new SnowFlake(2, 3);
 
+//            String id=snowFlake.nextId();
 
         return  "管理员";
     }

@@ -1,46 +1,46 @@
 package bean;
 
 public class Classify {
-    private String id;
+    private long id;
 
-    private Integer articleSum;
+    private int articleSum;
 
-    private Integer readSum;
+    private int readSun;
 
-    private Integer commentsSum;
+    private int commentsSun;
 
     private String classifyName;
 
-    public String getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(String id) {
-        this.id = id == null ? null : id.trim();
+    public void setId(long id) {
+        this.id = id;
     }
 
-    public Integer getArticleSum() {
+    public int getArticleSum() {
         return articleSum;
     }
 
-    public void setArticleSum(Integer articleSum) {
+    public void setArticleSum(int articleSum) {
         this.articleSum = articleSum;
     }
 
-    public Integer getReadSum() {
-        return readSum;
+    public int getReadSun() {
+        return readSun;
     }
 
-    public void setReadSum(Integer readSum) {
-        this.readSum = readSum;
+    public void setReadSun(int readSun) {
+        this.readSun = readSun;
     }
 
-    public Integer getCommentsSum() {
-        return commentsSum;
+    public int getCommentsSun() {
+        return commentsSun;
     }
 
-    public void setCommentsSum(Integer commentsSum) {
-        this.commentsSum = commentsSum;
+    public void setCommentsSun(int commentsSun) {
+        this.commentsSun = commentsSun;
     }
 
     public String getClassifyName() {

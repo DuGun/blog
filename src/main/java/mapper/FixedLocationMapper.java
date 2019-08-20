@@ -1,11 +1,11 @@
 package mapper;
 
-import bean.FixedLocationKey;
+import bean.FixedLocation;
 
 public interface FixedLocationMapper {
-    int deleteByPrimaryKey(FixedLocationKey key);
+    int deleteByPrimaryKey(FixedLocation key);
 
-    int insert(FixedLocationKey record);
+    int insert(FixedLocation record);
 
-    int insertSelective(FixedLocationKey record);
+    int insertSelective(FixedLocation record);
 }

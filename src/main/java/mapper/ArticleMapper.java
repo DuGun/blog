@@ -3,13 +3,13 @@ package mapper;
 import bean.Article;
 
 public interface ArticleMapper {
-    int deleteByPrimaryKey(String id);
+    int deleteByPrimaryKey(long id);
 
     int insert(Article record);
 
     int insertSelective(Article record);
 
-    Article selectByPrimaryKey(String id);
+    Article selectByPrimaryKey(long id);
 
     int updateByPrimaryKeySelective(Article record);
 

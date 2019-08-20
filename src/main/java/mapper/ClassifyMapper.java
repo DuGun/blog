@@ -3,13 +3,13 @@ package mapper;
 import bean.Classify;
 
 public interface ClassifyMapper {
-    int deleteByPrimaryKey(String id);
+    int deleteByPrimaryKey(long id);
 
     int insert(Classify record);
 
     int insertSelective(Classify record);
 
-    Classify selectByPrimaryKey(String id);
+    Classify selectByPrimaryKey(long id);
 
     int updateByPrimaryKeySelective(Classify record);
 

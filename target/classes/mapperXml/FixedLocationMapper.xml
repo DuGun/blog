@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="mapper.FixedLocationMapper">
-  <resultMap id="BaseResultMap" type="bean.FixedLocation">
+  <resultMap id="BaseResultMap" type="bean.FixedLocationKey">
     <id column="name" jdbcType="VARCHAR" property="name" />
     <id column="name_as" jdbcType="VARCHAR" property="nameAs" />
   </resultMap>
-  <delete id="deleteByPrimaryKey" parameterType="bean.FixedLocation">
+  <delete id="deleteByPrimaryKey" parameterType="bean.FixedLocationKey">
     delete from fixed_location
     where name = #{name,jdbcType=VARCHAR}
       and name_as = #{nameAs,jdbcType=VARCHAR}
   </delete>
-  <insert id="insert" parameterType="bean.FixedLocation">
+  <insert id="insert" parameterType="bean.FixedLocationKey">
     insert into fixed_location (name, name_as)
     values (#{name,jdbcType=VARCHAR}, #{nameAs,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="bean.FixedLocation">
+  <insert id="insertSelective" parameterType="bean.FixedLocationKey">
     insert into fixed_location
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="name != null">

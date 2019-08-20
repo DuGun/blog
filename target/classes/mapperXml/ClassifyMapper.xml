@@ -2,30 +2,30 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="mapper.ClassifyMapper">
   <resultMap id="BaseResultMap" type="bean.Classify">
-    <id column="id" jdbcType="BIGINT" property="id" />
+    <id column="id" jdbcType="VARCHAR" property="id" />
     <result column="article_sum" jdbcType="INTEGER" property="articleSum" />
-    <result column="read_sun" jdbcType="INTEGER" property="readSun" />
-    <result column="comments_sun" jdbcType="INTEGER" property="commentsSun" />
+    <result column="read_sum" jdbcType="INTEGER" property="readSum" />
+    <result column="comments_sum" jdbcType="INTEGER" property="commentsSum" />
     <result column="classify_name" jdbcType="VARCHAR" property="classifyName" />
   </resultMap>
   <sql id="Base_Column_List">
-    id, article_sum, read_sun, comments_sun, classify_name
+    id, article_sum, read_sum, comments_sum, classify_name
   </sql>
-  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
     from classify
-    where id = #{id,jdbcType=BIGINT}
+    where id = #{id,jdbcType=VARCHAR}
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
     delete from classify
-    where id = #{id,jdbcType=BIGINT}
+    where id = #{id,jdbcType=VARCHAR}
   </delete>
   <insert id="insert" parameterType="bean.Classify">
-    insert into classify (id, article_sum, read_sun, 
-      comments_sun, classify_name)
-    values (#{id,jdbcType=BIGINT}, #{articleSum,jdbcType=INTEGER}, #{readSun,jdbcType=INTEGER}, 
-      #{commentsSun,jdbcType=INTEGER}, #{classifyName,jdbcType=VARCHAR})
+    insert into classify (id, article_sum, read_sum, 
+      comments_sum, classify_name)
+    values (#{id,jdbcType=VARCHAR}, #{articleSum,jdbcType=INTEGER}, #{readSum,jdbcType=INTEGER}, 
+      #{commentsSum,jdbcType=INTEGER}, #{classifyName,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="bean.Classify">
     insert into classify
@@ -36,11 +36,11 @@
       <if test="articleSum != null">
         article_sum,
       </if>
-      <if test="readSun != null">
-        read_sun,
+      <if test="readSum != null">
+        read_sum,
       </if>
-      <if test="commentsSun != null">
-        comments_sun,
+      <if test="commentsSum != null">
+        comments_sum,
       </if>
       <if test="classifyName != null">
         classify_name,
@@ -48,16 +48,16 @@
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="id != null">
-        #{id,jdbcType=BIGINT},
+        #{id,jdbcType=VARCHAR},
       </if>
       <if test="articleSum != null">
         #{articleSum,jdbcType=INTEGER},
       </if>
-      <if test="readSun != null">
-        #{readSun,jdbcType=INTEGER},
+      <if test="readSum != null">
+        #{readSum,jdbcType=INTEGER},
       </if>
-      <if test="commentsSun != null">
-        #{commentsSun,jdbcType=INTEGER},
+      <if test="commentsSum != null">
+        #{commentsSum,jdbcType=INTEGER},
       </if>
       <if test="classifyName != null">
         #{classifyName,jdbcType=VARCHAR},
@@ -70,24 +70,24 @@
       <if test="articleSum != null">
         article_sum = #{articleSum,jdbcType=INTEGER},
       </if>
-      <if test="readSun != null">
-        read_sun = #{readSun,jdbcType=INTEGER},
+      <if test="readSum != null">
+        read_sum = #{readSum,jdbcType=INTEGER},
       </if>
-      <if test="commentsSun != null">
-        comments_sun = #{commentsSun,jdbcType=INTEGER},
+      <if test="commentsSum != null">
+        comments_sum = #{commentsSum,jdbcType=INTEGER},
       </if>
       <if test="classifyName != null">
         classify_name = #{classifyName,jdbcType=VARCHAR},
       </if>
     </set>
-    where id = #{id,jdbcType=BIGINT}
+    where id = #{id,jdbcType=VARCHAR}
   </update>
   <update id="updateByPrimaryKey" parameterType="bean.Classify">
     update classify
     set article_sum = #{articleSum,jdbcType=INTEGER},
-      read_sun = #{readSun,jdbcType=INTEGER},
-      comments_sun = #{commentsSun,jdbcType=INTEGER},
+      read_sum = #{readSum,jdbcType=INTEGER},
+      comments_sum = #{commentsSum,jdbcType=INTEGER},
       classify_name = #{classifyName,jdbcType=VARCHAR}
-    where id = #{id,jdbcType=BIGINT}
+    where id = #{id,jdbcType=VARCHAR}
   </update>
 </mapper>

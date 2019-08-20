@@ -2,30 +2,30 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="mapper.BloggerLayoutMapper">
   <resultMap id="BaseResultMap" type="bean.BloggerLayout">
-    <id column="id" jdbcType="BIGINT" property="id" />
+    <id column="id" jdbcType="VARCHAR" property="id" />
     <result column="table_name" jdbcType="VARCHAR" property="tableName" />
-    <result column="fiexd_content_id" jdbcType="BIGINT" property="fiexdContentId" />
-    <result column="fiexd_rank" jdbcType="INTEGER" property="fiexdRank" />
+    <result column="fiexd_content_id" jdbcType="VARCHAR" property="fiexdContentId" />
+    <result column="fiexd_rand" jdbcType="INTEGER" property="fiexdRand" />
     <result column="fiexd_place" jdbcType="VARCHAR" property="fiexdPlace" />
   </resultMap>
   <sql id="Base_Column_List">
-    id, table_name, fiexd_content_id, fiexd_rank, fiexd_place
+    id, table_name, fiexd_content_id, fiexd_rand, fiexd_place
   </sql>
-  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
     from blogger_layout
-    where id = #{id,jdbcType=BIGINT}
+    where id = #{id,jdbcType=VARCHAR}
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
     delete from blogger_layout
-    where id = #{id,jdbcType=BIGINT}
+    where id = #{id,jdbcType=VARCHAR}
   </delete>
   <insert id="insert" parameterType="bean.BloggerLayout">
     insert into blogger_layout (id, table_name, fiexd_content_id, 
-      fiexd_rank, fiexd_place)
-    values (#{id,jdbcType=BIGINT}, #{tableName,jdbcType=VARCHAR}, #{fiexdContentId,jdbcType=BIGINT}, 
-      #{fiexdRank,jdbcType=INTEGER}, #{fiexdPlace,jdbcType=VARCHAR})
+      fiexd_rand, fiexd_place)
+    values (#{id,jdbcType=VARCHAR}, #{tableName,jdbcType=VARCHAR}, #{fiexdContentId,jdbcType=VARCHAR}, 
+      #{fiexdRand,jdbcType=INTEGER}, #{fiexdPlace,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="bean.BloggerLayout">
     insert into blogger_layout
@@ -39,8 +39,8 @@
       <if test="fiexdContentId != null">
         fiexd_content_id,
       </if>
-      <if test="fiexdRank != null">
-        fiexd_rank,
+      <if test="fiexdRand != null">
+        fiexd_rand,
       </if>
       <if test="fiexdPlace != null">
         fiexd_place,
@@ -48,16 +48,16 @@
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="id != null">
-        #{id,jdbcType=BIGINT},
+        #{id,jdbcType=VARCHAR},
       </if>
       <if test="tableName != null">
         #{tableName,jdbcType=VARCHAR},
       </if>
       <if test="fiexdContentId != null">
-        #{fiexdContentId,jdbcType=BIGINT},
+        #{fiexdContentId,jdbcType=VARCHAR},
       </if>
-      <if test="fiexdRank != null">
-        #{fiexdRank,jdbcType=INTEGER},
+      <if test="fiexdRand != null">
+        #{fiexdRand,jdbcType=INTEGER},
       </if>
       <if test="fiexdPlace != null">
         #{fiexdPlace,jdbcType=VARCHAR},
@@ -71,23 +71,23 @@
         table_name = #{tableName,jdbcType=VARCHAR},
       </if>
       <if test="fiexdContentId != null">
-        fiexd_content_id = #{fiexdContentId,jdbcType=BIGINT},
+        fiexd_content_id = #{fiexdContentId,jdbcType=VARCHAR},
       </if>
-      <if test="fiexdRank != null">
-        fiexd_rank = #{fiexdRank,jdbcType=INTEGER},
+      <if test="fiexdRand != null">
+        fiexd_rand = #{fiexdRand,jdbcType=INTEGER},
       </if>
       <if test="fiexdPlace != null">
         fiexd_place = #{fiexdPlace,jdbcType=VARCHAR},
       </if>
     </set>
-    where id = #{id,jdbcType=BIGINT}
+    where id = #{id,jdbcType=VARCHAR}
   </update>
   <update id="updateByPrimaryKey" parameterType="bean.BloggerLayout">
     update blogger_layout
     set table_name = #{tableName,jdbcType=VARCHAR},
-      fiexd_content_id = #{fiexdContentId,jdbcType=BIGINT},
-      fiexd_rank = #{fiexdRank,jdbcType=INTEGER},
+      fiexd_content_id = #{fiexdContentId,jdbcType=VARCHAR},
+      fiexd_rand = #{fiexdRand,jdbcType=INTEGER},
       fiexd_place = #{fiexdPlace,jdbcType=VARCHAR}
-    where id = #{id,jdbcType=BIGINT}
+    where id = #{id,jdbcType=VARCHAR}
   </update>
 </mapper>

@@ -7,7 +7,7 @@ public class User {
 
     private String name;
 
-    private Integer commentsSum;
+    private int commentsSum;
 
     private String address;
 
@@ -35,11 +35,11 @@ public class User {
         this.name = name == null ? null : name.trim();
     }
 
-    public Integer getCommentsSum() {
+    public int getCommentsSum() {
         return commentsSum;
     }
 
-    public void setCommentsSum(Integer commentsSum) {
+    public void setCommentsSum(int commentsSum) {
         this.commentsSum = commentsSum;
     }
 

@@ -3,13 +3,13 @@ package mapper;
 import bean.Words;
 
 public interface WordsMapper {
-    int deleteByPrimaryKey(String id);
+    int deleteByPrimaryKey(long id);
 
     int insert(Words record);
 
     int insertSelective(Words record);
 
-    Words selectByPrimaryKey(String id);
+    Words selectByPrimaryKey(long id);
 
     int updateByPrimaryKeySelective(Words record);
 

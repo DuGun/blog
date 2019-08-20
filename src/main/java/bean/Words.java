@@ -3,18 +3,18 @@ package bean;
 import java.util.Date;
 
 public class Words {
-    private String id;
+    private long id;
 
     private String content;
 
     private Date time;
 
-    public String getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(String id) {
-        this.id = id == null ? null : id.trim();
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getContent() {

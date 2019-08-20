@@ -3,9 +3,9 @@ package bean;
 import java.util.Date;
 
 public class Comments {
-    private String id;
+    private long id;
 
-    private String articleId;
+    private long articleId;
 
     private Date time;
 
@@ -13,20 +13,24 @@ public class Comments {
 
     private String email;
 
-    public String getId() {
+    private String content;
+
+    private String reply;
+
+    public long getId() {
         return id;
     }
 
-    public void setId(String id) {
-        this.id = id == null ? null : id.trim();
+    public void setId(long id) {
+        this.id = id;
     }
 
-    public String getArticleId() {
+    public long getArticleId() {
         return articleId;
     }
 
-    public void setArticleId(String articleId) {
-        this.articleId = articleId == null ? null : articleId.trim();
+    public void setArticleId(long articleId) {
+        this.articleId = articleId;
     }
 
     public Date getTime() {
@@ -51,5 +55,21 @@ public class Comments {
 
     public void setEmail(String email) {
         this.email = email == null ? null : email.trim();
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content == null ? null : content.trim();
+    }
+
+    public String getReply() {
+        return reply;
+    }
+
+    public void setReply(String reply) {
+        this.reply = reply == null ? null : reply.trim();
     }
 }

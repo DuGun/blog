@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="mapper.SubscriptionMapper">
-  <resultMap id="BaseResultMap" type="bean.Subscription">
+  <resultMap id="BaseResultMap" type="bean.SubscriptionKey">
     <id column="email" jdbcType="VARCHAR" property="email" />
-    <id column="article_id" jdbcType="BIGINT" property="articleId" />
+    <id column="article_id" jdbcType="VARCHAR" property="articleId" />
   </resultMap>
-  <delete id="deleteByPrimaryKey" parameterType="bean.Subscription">
+  <delete id="deleteByPrimaryKey" parameterType="bean.SubscriptionKey">
     delete from subscription
     where email = #{email,jdbcType=VARCHAR}
-      and article_id = #{articleId,jdbcType=BIGINT}
+      and article_id = #{articleId,jdbcType=VARCHAR}
   </delete>
-  <insert id="insert" parameterType="bean.Subscription">
+  <insert id="insert" parameterType="bean.SubscriptionKey">
     insert into subscription (email, article_id)
-    values (#{email,jdbcType=VARCHAR}, #{articleId,jdbcType=BIGINT})
+    values (#{email,jdbcType=VARCHAR}, #{articleId,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="bean.Subscription">
+  <insert id="insertSelective" parameterType="bean.SubscriptionKey">
     insert into subscription
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="email != null">
@@ -29,7 +29,7 @@
         #{email,jdbcType=VARCHAR},
       </if>
       <if test="articleId != null">
-        #{articleId,jdbcType=BIGINT},
+        #{articleId,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>

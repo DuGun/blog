@@ -1,11 +1,11 @@
 package mapper;
 
-import bean.SubscriptionKey;
+import bean.Subscription;
 
 public interface SubscriptionMapper {
-    int deleteByPrimaryKey(SubscriptionKey key);
+    int deleteByPrimaryKey(Subscription key);
 
-    int insert(SubscriptionKey record);
+    int insert(Subscription record);
 
-    int insertSelective(SubscriptionKey record);
+    int insertSelective(Subscription record);
 }

@@ -1,20 +1,19 @@
 package mapper;
 
 import bean.Comments;
-import bean.CommentsWithBLOBs;
 
 public interface CommentsMapper {
-    int deleteByPrimaryKey(String id);
+    int deleteByPrimaryKey(long id);
 
-    int insert(CommentsWithBLOBs record);
+    int insert(Comments record);
 
-    int insertSelective(CommentsWithBLOBs record);
+    int insertSelective(Comments record);
 
-    CommentsWithBLOBs selectByPrimaryKey(String id);
+    Comments selectByPrimaryKey(long id);
 
-    int updateByPrimaryKeySelective(CommentsWithBLOBs record);
+    int updateByPrimaryKeySelective(Comments record);
 
-    int updateByPrimaryKeyWithBLOBs(CommentsWithBLOBs record);
+    int updateByPrimary(Comments record);
 
     int updateByPrimaryKey(Comments record);
 }

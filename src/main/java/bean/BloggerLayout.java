@@ -1,22 +1,22 @@
 package bean;
 
 public class BloggerLayout {
-    private String id;
+    private long id;
 
     private String tableName;
 
-    private String fiexdContentId;
+    private long fiexdContentId;
 
-    private Integer fiexdRand;
+    private int fiexdRank;
 
     private String fiexdPlace;
 
-    public String getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(String id) {
-        this.id = id == null ? null : id.trim();
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getTableName() {
@@ -27,20 +27,20 @@ public class BloggerLayout {
         this.tableName = tableName == null ? null : tableName.trim();
     }
 
-    public String getFiexdContentId() {
+    public long getFiexdContentId() {
         return fiexdContentId;
     }
 
-    public void setFiexdContentId(String fiexdContentId) {
-        this.fiexdContentId = fiexdContentId == null ? null : fiexdContentId.trim();
+    public void setFiexdContentId(long fiexdContentId) {
+        this.fiexdContentId = fiexdContentId;
     }
 
-    public Integer getFiexdRand() {
-        return fiexdRand;
+    public int getFiexdRank() {
+        return fiexdRank;
     }
 
-    public void setFiexdRand(Integer fiexdRand) {
-        this.fiexdRand = fiexdRand;
+    public void setFiexdRank(int fiexdRank) {
+        this.fiexdRank = fiexdRank;
     }
 
     public String getFiexdPlace() {
