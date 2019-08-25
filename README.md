@@ -4,6 +4,7 @@
 屌丝后端人士：脐橙
 
 <a href="http://blog.javalake.top/">前端网址</a>
+<a href="https://github.com/DuGun/blog/blob/master/exploitBlogData/blog.sql">mysql脚本</a>
 <br/>
 <br/>
 
@@ -21,3 +22,4 @@
 ![image](https://github.com/DuGun/blog/blob/master/exploitBlogData/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1(%E4%B8%89).png)
 
 ![image](https://github.com/DuGun/blog/blob/master/exploitBlogData/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1(%E5%9B%9B).png)
+
