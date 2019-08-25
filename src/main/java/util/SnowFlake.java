@@ -1,5 +1,20 @@
 package util;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+
+@Component
 public class SnowFlake {
+
+    @Value("${snow_flake_datacenter_id}")
+    private long datacenterId; //数据中心
+
+    @Value("${snow_flake_datacenter_machineid}")
+    private long machineId; //机器标识
+
+    private long sequence = 0L; //序列号
+    private long lastStmp = -1L;//上一次时间戳
 
     /**
      * 起始的时间戳
@@ -27,20 +42,14 @@ public class SnowFlake {
     private final static long DATACENTER_LEFT = SEQUENCE_BIT + MACHINE_BIT;
     private final static long TIMESTMP_LEFT = DATACENTER_LEFT + DATACENTER_BIT;
 
-    private long datacenterId;  //数据中心
-    private long machineId;    //机器标识
-    private long sequence = 0L; //序列号
-    private long lastStmp = -1L;//上一次时间戳
 
-    public SnowFlake(long datacenterId, long machineId) {
+    public SnowFlake() {
         if (datacenterId > MAX_DATACENTER_NUM || datacenterId < 0) {
             throw new IllegalArgumentException("datacenterId can't be greater than MAX_DATACENTER_NUM or less than 0");
         }
         if (machineId > MAX_MACHINE_NUM || machineId < 0) {
             throw new IllegalArgumentException("machineId can't be greater than MAX_MACHINE_NUM or less than 0");
         }
-        this.datacenterId = datacenterId;
-        this.machineId = machineId;
     }
 
     /**

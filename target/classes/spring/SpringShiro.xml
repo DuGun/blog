@@ -17,7 +17,8 @@
         <!-- 权限配置 -->
         <property name="filterChainDefinitions">
             <value>
-                /message/**=keton
+<!--                /message/**=keton-->
+                /test/**=anon
                 /** =anon
             </value>
         </property>

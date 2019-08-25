@@ -3,18 +3,20 @@ package controller.messages;
 import org.hibernate.validator.constraints.Length;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import util.ResponseBean;
 
 import javax.annotation.Resource;
 import javax.validation.constraints.NotBlank;
 
-@Controller()
+@Controller
+@RequestMapping("message")
 public class HomePage {
     @Resource
     ResponseBean responseBean;
 
-    @GetMapping("/message/home")
+    @GetMapping("home")
     @ResponseBody
     public ResponseBean Home(@NotBlank @Length(min = 6) String password){
 

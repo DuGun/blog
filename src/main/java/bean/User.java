@@ -5,7 +5,9 @@ public class User {
 
     private String head;
 
-    private String name;
+    private String userName;
+
+    private int goodSun;
 
     private int commentsSum;
 
@@ -27,12 +29,20 @@ public class User {
         this.head = head == null ? null : head.trim();
     }
 
-    public String getName() {
-        return name;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setName(String name) {
-        this.name = name == null ? null : name.trim();
+    public void setUserName(String userName) {
+        this.userName = userName == null ? null : userName.trim();
+    }
+
+    public int getGoodSun() {
+        return goodSun;
+    }
+
+    public void setGoodSun(int goodSun) {
+        this.goodSun = goodSun;
     }
 
     public int getCommentsSum() {

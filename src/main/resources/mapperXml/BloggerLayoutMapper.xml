@@ -2,36 +2,42 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="mapper.BloggerLayoutMapper">
   <resultMap id="BaseResultMap" type="bean.BloggerLayout">
-    <id column="id" jdbcType="BIGINT" property="id" />
+    <id column="fiexd_rank" jdbcType="INTEGER" property="fiexdRank" />
+    <id column="fiexd_place" jdbcType="BIGINT" property="fiexdPlace" />
     <result column="table_name" jdbcType="VARCHAR" property="tableName" />
     <result column="fiexd_content_id" jdbcType="BIGINT" property="fiexdContentId" />
-    <result column="fiexd_rank" jdbcType="INTEGER" property="fiexdRank" />
-    <result column="fiexd_place" jdbcType="VARCHAR" property="fiexdPlace" />
   </resultMap>
   <sql id="Base_Column_List">
-    id, table_name, fiexd_content_id, fiexd_rank, fiexd_place
+    fiexd_rank, fiexd_place, table_name, fiexd_content_id
   </sql>
-  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+
+
+  <select id="selectByPrimaryKey" parameterType="bean.BloggerLayout" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
     from blogger_layout
-    where id = #{id,jdbcType=BIGINT}
+    where fiexd_rank = #{fiexdRank,jdbcType=INTEGER}
+      and fiexd_place = #{fiexdPlace,jdbcType=BIGINT}
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+  <delete id="deleteByPrimaryKey" parameterType="bean.BloggerLayout">
     delete from blogger_layout
-    where id = #{id,jdbcType=BIGINT}
+    where fiexd_rank = #{fiexdRank,jdbcType=INTEGER}
+      and fiexd_place = #{fiexdPlace,jdbcType=BIGINT}
   </delete>
   <insert id="insert" parameterType="bean.BloggerLayout">
-    insert into blogger_layout (id, table_name, fiexd_content_id, 
-      fiexd_rank, fiexd_place)
-    values (#{id,jdbcType=BIGINT}, #{tableName,jdbcType=VARCHAR}, #{fiexdContentId,jdbcType=BIGINT}, 
-      #{fiexdRank,jdbcType=INTEGER}, #{fiexdPlace,jdbcType=VARCHAR})
+    insert into blogger_layout (fiexd_rank, fiexd_place, table_name, 
+      fiexd_content_id)
+    values (#{fiexdRank,jdbcType=INTEGER}, #{fiexdPlace,jdbcType=BIGINT}, #{tableName,jdbcType=VARCHAR}, 
+      #{fiexdContentId,jdbcType=BIGINT})
   </insert>
   <insert id="insertSelective" parameterType="bean.BloggerLayout">
     insert into blogger_layout
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="id != null">
-        id,
+      <if test="fiexdRank != null">
+        fiexd_rank,
+      </if>
+      <if test="fiexdPlace != null">
+        fiexd_place,
       </if>
       <if test="tableName != null">
         table_name,
@@ -39,28 +45,19 @@
       <if test="fiexdContentId != null">
         fiexd_content_id,
       </if>
-      <if test="fiexdRank != null">
-        fiexd_rank,
-      </if>
-      <if test="fiexdPlace != null">
-        fiexd_place,
-      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="id != null">
-        #{id,jdbcType=BIGINT},
+      <if test="fiexdRank != null">
+        #{fiexdRank,jdbcType=INTEGER},
+      </if>
+      <if test="fiexdPlace != null">
+        #{fiexdPlace,jdbcType=BIGINT},
       </if>
       <if test="tableName != null">
         #{tableName,jdbcType=VARCHAR},
       </if>
       <if test="fiexdContentId != null">
         #{fiexdContentId,jdbcType=BIGINT},
-      </if>
-      <if test="fiexdRank != null">
-        #{fiexdRank,jdbcType=INTEGER},
-      </if>
-      <if test="fiexdPlace != null">
-        #{fiexdPlace,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -73,21 +70,15 @@
       <if test="fiexdContentId != null">
         fiexd_content_id = #{fiexdContentId,jdbcType=BIGINT},
       </if>
-      <if test="fiexdRank != null">
-        fiexd_rank = #{fiexdRank,jdbcType=INTEGER},
-      </if>
-      <if test="fiexdPlace != null">
-        fiexd_place = #{fiexdPlace,jdbcType=VARCHAR},
-      </if>
     </set>
-    where id = #{id,jdbcType=BIGINT}
+    where fiexd_rank = #{fiexdRank,jdbcType=INTEGER}
+      and fiexd_place = #{fiexdPlace,jdbcType=BIGINT}
   </update>
   <update id="updateByPrimaryKey" parameterType="bean.BloggerLayout">
     update blogger_layout
     set table_name = #{tableName,jdbcType=VARCHAR},
-      fiexd_content_id = #{fiexdContentId,jdbcType=BIGINT},
-      fiexd_rank = #{fiexdRank,jdbcType=INTEGER},
-      fiexd_place = #{fiexdPlace,jdbcType=VARCHAR}
-    where id = #{id,jdbcType=BIGINT}
+      fiexd_content_id = #{fiexdContentId,jdbcType=BIGINT}
+    where fiexd_rank = #{fiexdRank,jdbcType=INTEGER}
+      and fiexd_place = #{fiexdPlace,jdbcType=BIGINT}
   </update>
 </mapper>

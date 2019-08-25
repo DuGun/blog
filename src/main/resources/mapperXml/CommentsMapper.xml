@@ -5,14 +5,14 @@
     <id column="id" jdbcType="BIGINT" property="id" />
     <result column="article_id" jdbcType="BIGINT" property="articleId" />
     <result column="time" jdbcType="TIMESTAMP" property="time" />
-    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="user_name" jdbcType="VARCHAR" property="userName" />
     <result column="email" jdbcType="VARCHAR" property="email" />
     <result column="content" jdbcType="LONGVARCHAR" property="content" />
     <result column="reply" jdbcType="LONGVARCHAR" property="reply" />
   </resultMap>
-
+  
   <sql id="Base_Column_List">
-    id, article_id, time, name, email
+    id, article_id, time, user_name, email
   </sql>
   <sql id="Blob_Column_List">
     content, reply
@@ -31,10 +31,10 @@
   </delete>
   <insert id="insert" parameterType="bean.Comments">
     insert into comments (id, article_id, time, 
-      name, email, content, 
+      user_name, email, content, 
       reply)
     values (#{id,jdbcType=BIGINT}, #{articleId,jdbcType=BIGINT}, #{time,jdbcType=TIMESTAMP}, 
-      #{name,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, #{content,jdbcType=LONGVARCHAR}, 
+      #{userName,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, #{content,jdbcType=LONGVARCHAR}, 
       #{reply,jdbcType=LONGVARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="bean.Comments">
@@ -49,8 +49,8 @@
       <if test="time != null">
         time,
       </if>
-      <if test="name != null">
-        name,
+      <if test="userName != null">
+        user_name,
       </if>
       <if test="email != null">
         email,
@@ -72,8 +72,8 @@
       <if test="time != null">
         #{time,jdbcType=TIMESTAMP},
       </if>
-      <if test="name != null">
-        #{name,jdbcType=VARCHAR},
+      <if test="userName != null">
+        #{userName,jdbcType=VARCHAR},
       </if>
       <if test="email != null">
         #{email,jdbcType=VARCHAR},
@@ -95,8 +95,8 @@
       <if test="time != null">
         time = #{time,jdbcType=TIMESTAMP},
       </if>
-      <if test="name != null">
-        name = #{name,jdbcType=VARCHAR},
+      <if test="userName != null">
+        user_name = #{userName,jdbcType=VARCHAR},
       </if>
       <if test="email != null">
         email = #{email,jdbcType=VARCHAR},
@@ -114,7 +114,7 @@
     update comments
     set article_id = #{articleId,jdbcType=BIGINT},
       time = #{time,jdbcType=TIMESTAMP},
-      name = #{name,jdbcType=VARCHAR},
+      user_name = #{userName,jdbcType=VARCHAR},
       email = #{email,jdbcType=VARCHAR},
       content = #{content,jdbcType=LONGVARCHAR},
       reply = #{reply,jdbcType=LONGVARCHAR}
@@ -124,7 +124,7 @@
     update comments
     set article_id = #{articleId,jdbcType=BIGINT},
       time = #{time,jdbcType=TIMESTAMP},
-      name = #{name,jdbcType=VARCHAR},
+      user_name = #{userName,jdbcType=VARCHAR},
       email = #{email,jdbcType=VARCHAR}
     where id = #{id,jdbcType=BIGINT}
   </update>

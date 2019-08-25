@@ -1,27 +1,30 @@
 package bean;
 
-import java.util.Date;
+import org.hibernate.validator.constraints.Length;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
+import java.util.Date;
 public class Article {
     private long id;
 
     private long classifyId;
 
+    //标题
+    @NotBlank(message = "{article_title_null_message}")
+    @Length(min = 1,max = 40,message = "{article_title_length_message}")
     private String title;
 
     private String contentUrl;
 
     private Date time;
 
-    private int readSum;
-
-    private int commentsSum;
-
+    @Min(value = 0,message = "{article_status_message}")
+    @Max(value = 2,message = "{article_status_message}")
     private int status;
 
-    private String imgUrl;
-
-    private int good;
+    private String thumbnailUrl;
 
     public long getId() {
         return id;
@@ -63,22 +66,6 @@ public class Article {
         this.time = time;
     }
 
-    public int getReadSum() {
-        return readSum;
-    }
-
-    public void setReadSum(int readSum) {
-        this.readSum = readSum;
-    }
-
-    public int getCommentsSum() {
-        return commentsSum;
-    }
-
-    public void setCommentsSum(int commentsSum) {
-        this.commentsSum = commentsSum;
-    }
-
     public int getStatus() {
         return status;
     }
@@ -87,19 +74,11 @@ public class Article {
         this.status = status;
     }
 
-    public String getImgUrl() {
-        return imgUrl;
+    public String getThumbnailUrl() {
+        return thumbnailUrl;
     }
 
-    public void setImgUrl(String imgUrl) {
-        this.imgUrl = imgUrl == null ? null : imgUrl.trim();
-    }
-
-    public int getGood() {
-        return good;
-    }
-
-    public void setGood(int good) {
-        this.good = good;
+    public void setThumbnailUrl(String thumbnailUrl) {
+        this.thumbnailUrl = thumbnailUrl == null ? null : thumbnailUrl.trim();
     }
 }

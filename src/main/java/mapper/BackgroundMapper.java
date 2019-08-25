@@ -3,13 +3,13 @@ package mapper;
 import bean.Background;
 
 public interface BackgroundMapper {
-    int deleteByPrimaryKey(long id);
+    int deleteByPrimaryKey(Long id);
 
     int insert(Background record);
 
     int insertSelective(Background record);
 
-    Background selectByPrimaryKey(long id);
+    Background selectByPrimaryKey(Long id);
 
     int updateByPrimaryKeySelective(Background record);
 

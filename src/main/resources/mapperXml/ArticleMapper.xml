@@ -7,16 +7,14 @@
     <result column="title" jdbcType="VARCHAR" property="title" />
     <result column="content_url" jdbcType="VARCHAR" property="contentUrl" />
     <result column="time" jdbcType="TIMESTAMP" property="time" />
-    <result column="read_sum" jdbcType="INTEGER" property="readSum" />
-    <result column="comments_sum" jdbcType="INTEGER" property="commentsSum" />
     <result column="status" jdbcType="INTEGER" property="status" />
-    <result column="img_url" jdbcType="VARCHAR" property="imgUrl" />
-    <result column="good" jdbcType="INTEGER" property="good" />
+    <result column="thumbnail_url" jdbcType="VARCHAR" property="thumbnailUrl" />
   </resultMap>
   <sql id="Base_Column_List">
-    id, classify_id, title, content_url, time, read_sum, comments_sum, status, img_url, 
-    good
+    id, classify_id, title, content_url, time, status, thumbnail_url
   </sql>
+
+
   <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
@@ -29,13 +27,11 @@
   </delete>
   <insert id="insert" parameterType="bean.Article">
     insert into article (id, classify_id, title, 
-      content_url, time, read_sum, 
-      comments_sum, status, img_url, 
-      good)
+      content_url, time, status, 
+      thumbnail_url)
     values (#{id,jdbcType=BIGINT}, #{classifyId,jdbcType=BIGINT}, #{title,jdbcType=VARCHAR}, 
-      #{contentUrl,jdbcType=VARCHAR}, #{time,jdbcType=TIMESTAMP}, #{readSum,jdbcType=INTEGER}, 
-      #{commentsSum,jdbcType=INTEGER}, #{status,jdbcType=INTEGER}, #{imgUrl,jdbcType=VARCHAR}, 
-      #{good,jdbcType=INTEGER})
+      #{contentUrl,jdbcType=VARCHAR}, #{time,jdbcType=TIMESTAMP}, #{status,jdbcType=INTEGER}, 
+      #{thumbnailUrl,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="bean.Article">
     insert into article
@@ -55,20 +51,11 @@
       <if test="time != null">
         time,
       </if>
-      <if test="readSum != null">
-        read_sum,
-      </if>
-      <if test="commentsSum != null">
-        comments_sum,
-      </if>
       <if test="status != null">
         status,
       </if>
-      <if test="imgUrl != null">
-        img_url,
-      </if>
-      <if test="good != null">
-        good,
+      <if test="thumbnailUrl != null">
+        thumbnail_url,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
@@ -87,20 +74,11 @@
       <if test="time != null">
         #{time,jdbcType=TIMESTAMP},
       </if>
-      <if test="readSum != null">
-        #{readSum,jdbcType=INTEGER},
-      </if>
-      <if test="commentsSum != null">
-        #{commentsSum,jdbcType=INTEGER},
-      </if>
       <if test="status != null">
         #{status,jdbcType=INTEGER},
       </if>
-      <if test="imgUrl != null">
-        #{imgUrl,jdbcType=VARCHAR},
-      </if>
-      <if test="good != null">
-        #{good,jdbcType=INTEGER},
+      <if test="thumbnailUrl != null">
+        #{thumbnailUrl,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -119,20 +97,11 @@
       <if test="time != null">
         time = #{time,jdbcType=TIMESTAMP},
       </if>
-      <if test="readSum != null">
-        read_sum = #{readSum,jdbcType=INTEGER},
-      </if>
-      <if test="commentsSum != null">
-        comments_sum = #{commentsSum,jdbcType=INTEGER},
-      </if>
       <if test="status != null">
         status = #{status,jdbcType=INTEGER},
       </if>
-      <if test="imgUrl != null">
-        img_url = #{imgUrl,jdbcType=VARCHAR},
-      </if>
-      <if test="good != null">
-        good = #{good,jdbcType=INTEGER},
+      <if test="thumbnailUrl != null">
+        thumbnail_url = #{thumbnailUrl,jdbcType=VARCHAR},
       </if>
     </set>
     where id = #{id,jdbcType=BIGINT}
@@ -143,11 +112,8 @@
       title = #{title,jdbcType=VARCHAR},
       content_url = #{contentUrl,jdbcType=VARCHAR},
       time = #{time,jdbcType=TIMESTAMP},
-      read_sum = #{readSum,jdbcType=INTEGER},
-      comments_sum = #{commentsSum,jdbcType=INTEGER},
       status = #{status,jdbcType=INTEGER},
-      img_url = #{imgUrl,jdbcType=VARCHAR},
-      good = #{good,jdbcType=INTEGER}
+      thumbnail_url = #{thumbnailUrl,jdbcType=VARCHAR}
     where id = #{id,jdbcType=BIGINT}
   </update>
 </mapper>

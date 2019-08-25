@@ -1,23 +1,13 @@
 package bean;
 
-public class BloggerLayout {
-    private long id;
-
+public class BloggerLayout  {
     private String tableName;
 
     private long fiexdContentId;
 
     private int fiexdRank;
 
-    private String fiexdPlace;
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
+    private long fiexdPlace;
 
     public String getTableName() {
         return tableName;
@@ -43,11 +33,11 @@ public class BloggerLayout {
         this.fiexdRank = fiexdRank;
     }
 
-    public String getFiexdPlace() {
+    public long getFiexdPlace() {
         return fiexdPlace;
     }
 
-    public void setFiexdPlace(String fiexdPlace) {
-        this.fiexdPlace = fiexdPlace == null ? null : fiexdPlace.trim();
+    public void setFiexdPlace(long fiexdPlace) {
+        this.fiexdPlace = fiexdPlace;
     }
 }

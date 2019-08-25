@@ -11,7 +11,10 @@ public interface ClassifyMapper {
 
     Classify selectByPrimaryKey(long id);
 
+    Long[] selectClassifyIds();
+
     int updateByPrimaryKeySelective(Classify record);
 
     int updateByPrimaryKey(Classify record);
+
 }

@@ -5,7 +5,6 @@ import org.apache.shiro.authc.AuthenticationToken;
 /**
  * 自定义令牌
  * 记住该令牌记住在自定义Realm中重写supports方法
- * 2019-4-3
  */
 public class JwtToken implements AuthenticationToken {
 

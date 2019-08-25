@@ -11,6 +11,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class ResponseBean {
 
+
     /** 参数有误状态码 **/
     /** 权限不足,或者不允许访问等**/
     public static final int HTTP_CODE_ORBIDDEN=403;
@@ -82,6 +83,10 @@ public class ResponseBean {
 
     public void setData(Object data) {
         this.data = data;
+    }
+
+    public static String longMessage(String message){
+        return "----------------"+"消息:"+"message"+"----------------";
     }
 
 }

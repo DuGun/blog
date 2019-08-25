@@ -8,12 +8,22 @@
        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
     <!--这里为子容器-->
 
+
     <!--扫描器-->
     <context:component-scan base-package="controller"/>
 
-    <!--静态资源处理-->
-    <mvc:resources mapping="/html/" location="WEB-INF/html"/>
+    <!--配置文件-->
+    <bean id="propertyConfigurer2" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+            <list>
 
+            </list>
+        </property>
+    </bean>
+
+
+    <!--静态资源处理-->
+    <mvc:resources location="/blogResources/" mapping="/blogResources/**"/>
     <!--开启注解版controller,对于返回值-->
     <mvc:annotation-driven validator="validator">
         <mvc:message-converters>
@@ -44,30 +54,34 @@
     </mvc:annotation-driven>
 
     <!--校验框架整合-->
-        <!-- 校验错误信息配置文件-->
-    <bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
-        <!-- 资源 文件 -->
-        <property name="basenames">
-            <list>
-                <value>classpath:parameterConfiguration.validation</value>
-            </list>
-        </property>
-        <property name="defaultEncoding" value="UTF-8"/>
-        <!-- 对资源文件内容缓存时间，单位为：秒 -->
-        <property name="cacheSeconds" value="99999"/>
-    </bean>
-         <!--校验-->
+    <!--校验-->
     <bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
         <property name="providerClass" value="org.hibernate.validator.HibernateValidator"></property>
         <property name="validationMessageSource" ref="messageSource"></property>
     </bean>
 
-        <!--校验返回值-->
+    <!-- 校验错误信息配置文件-->
+    <bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+        <!-- 资源 文件 -->
+        <property name="basenames">
+            <list>
+                <value>classpath:validation</value>
+            </list>
+        </property>
+        <property name="defaultEncoding" value="UTF-8"/>
+        <!-- 对资源文件内容缓存时间，单位为：秒 -->
+        <property name="cacheSeconds" value="60"/>
+    </bean>
+
+    <!--校验返回值-->
     <bean id="methodValidationPostProcessor"
           class="org.springframework.validation.beanvalidation.MethodValidationPostProcessor">
     </bean>
 
-
     <!--上传文件-->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="defaultEncoding" value="UTF-8"/>
+        <property name="maxUploadSize" value="10000000"/>
+    </bean>
 
 </beans>

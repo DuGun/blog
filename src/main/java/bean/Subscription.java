@@ -3,7 +3,7 @@ package bean;
 public class Subscription {
     private String email;
 
-    private long articleId;
+    private long classifyId;
 
     public String getEmail() {
         return email;
@@ -13,11 +13,11 @@ public class Subscription {
         this.email = email == null ? null : email.trim();
     }
 
-    public long getArticleId() {
-        return articleId;
+    public long getClassifyId() {
+        return classifyId;
     }
 
-    public void setArticleId(long articleId) {
-        this.articleId = articleId;
+    public void setClassifyId(long classifyId) {
+        this.classifyId = classifyId;
     }
 }

@@ -3,13 +3,13 @@ package mapper;
 import bean.BloggerLayout;
 
 public interface BloggerLayoutMapper {
-    int deleteByPrimaryKey(long id);
+    int deleteByPrimaryKey(BloggerLayout key);
 
     int insert(BloggerLayout record);
 
     int insertSelective(BloggerLayout record);
 
-    BloggerLayout selectByPrimaryKey(long id);
+    BloggerLayout selectByPrimaryKey(BloggerLayout key);
 
     int updateByPrimaryKeySelective(BloggerLayout record);
 

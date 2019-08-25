@@ -16,13 +16,20 @@
 
     <!--加载配置文件-->
     <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-        <property name="location" value="classpath:database/jdbc.properties"/>
+        <property name="locations">
+            <list>
+                <value>classpath:storeProperties/jdbc.properties</value>
+                <value>classpath:storeProperties/projectFile.properties</value>
+                <value>classpath:storeProperties/projectOther.properties</value>
+            </list>
+        </property>
     </bean>
+
 
     <aop:aspectj-autoproxy></aop:aspectj-autoproxy>
 
     <!--扫描包-->
-    <context:component-scan base-package="bean,serviceImpl,util"/>
+    <context:component-scan base-package="bean,serviceImpl,util,exception,test"/>
 
     <!--配置数据源-->
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
@@ -61,4 +68,7 @@
 
     <!--开启事务注解-->
     <tx:annotation-driven transaction-manager="transactionManager" proxy-target-class="true"/>
+
+    <!--注册方法验证的处理器-->
+    <bean class="org.springframework.validation.beanvalidation.MethodValidationPostProcessor"/>
 </beans>

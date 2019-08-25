@@ -7,8 +7,67 @@
     <!-- 引入其他配置文件 -->
     <context-param>
         <param-name>contextConfigLocation</param-name>
-        <param-value>classpath:spring/springMyBatis.xml,classpath:spring/SpringShiro.xml,classpath:spring/SpringRedis.xml</param-value>
+        <param-value>
+            classpath:spring/springMyBatis.xml,classpath:spring/SpringShiro.xml,classpath:spring/SpringRedis.xml
+        </param-value>
     </context-param>
+
+
+    <!--该过滤器要放在前面 否则报错--><!-- 编码过滤器 -->
+    <filter>
+        <filter-name>encodingFilter</filter-name>
+        <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+        <!--<async-supported>true</async-supported>-->
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+        <init-param>
+            <param-name>forceEncoding</param-name>
+            <param-value>true</param-value>
+        </init-param>
+    </filter>
+
+
+    <!--开启各种请求方式-->
+    <filter>
+        <filter-name>HiddenHttpMethodFilter</filter-name>
+        <filter-class>org.springframework.web.filter.HiddenHttpMethodFilter</filter-class>
+    </filter>
+
+    <!--CoresFilter-->
+    <filter>
+        <filter-name>core</filter-name>
+        <filter-class>filter.CorsFilter</filter-class>
+        <init-param>
+            <!--设置多个IP/域名等请用逗号分割-->
+            <param-name>allowOrigin</param-name>
+            <param-value>*</param-value>
+        </init-param>
+        <init-param>
+            <!--设置多个请求方式等请用逗号分割 POST, GET, OPTIONS, DELETE-->
+            <param-name>allowMethods</param-name>
+            <param-value>GET,POST,PUT,DELETE,OPTIONS</param-value>
+        </init-param>
+        <init-param>
+            <param-name>allowCredentials</param-name>
+            <param-value>true</param-value>
+        </init-param>
+        <init-param>
+            <!--设置多个内容格式请用逗号分割-->
+            <param-name>allowHeaders</param-name>
+            <param-value>Content-Type</param-value>
+        </init-param>
+        <init-param>
+            <param-name>maxAge</param-name>
+            <param-value>3600</param-value>
+        </init-param>
+        <init-param>
+            <param-name>exposeHeaders</param-name>
+            <param-value>Set-Cookie</param-value>
+        </init-param>
+    </filter>
+
 
     <!--Shrio-->
     <filter>
@@ -21,10 +80,27 @@
         </init-param>
     </filter>
 
+
+    <filter-mapping>
+        <filter-name>encodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <filter-mapping>
+        <filter-name>HiddenHttpMethodFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
     <filter-mapping>
         <filter-name>shiroFilter</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
+
+    <filter-mapping>
+        <filter-name>core</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
 
     <!-- Spring监听器 加载父容器-->
     <listener>

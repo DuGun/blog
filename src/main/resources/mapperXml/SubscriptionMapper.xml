@@ -3,16 +3,16 @@
 <mapper namespace="mapper.SubscriptionMapper">
   <resultMap id="BaseResultMap" type="bean.Subscription">
     <id column="email" jdbcType="VARCHAR" property="email" />
-    <id column="article_id" jdbcType="BIGINT" property="articleId" />
+    <id column="classify_id" jdbcType="BIGINT" property="classifyId" />
   </resultMap>
   <delete id="deleteByPrimaryKey" parameterType="bean.Subscription">
     delete from subscription
     where email = #{email,jdbcType=VARCHAR}
-      and article_id = #{articleId,jdbcType=BIGINT}
+      and classify_id = #{classifyId,jdbcType=BIGINT}
   </delete>
   <insert id="insert" parameterType="bean.Subscription">
-    insert into subscription (email, article_id)
-    values (#{email,jdbcType=VARCHAR}, #{articleId,jdbcType=BIGINT})
+    insert into subscription (email, classify_id)
+    values (#{email,jdbcType=VARCHAR}, #{classifyId,jdbcType=BIGINT})
   </insert>
   <insert id="insertSelective" parameterType="bean.Subscription">
     insert into subscription
@@ -20,16 +20,16 @@
       <if test="email != null">
         email,
       </if>
-      <if test="articleId != null">
-        article_id,
+      <if test="classifyId != null">
+        classify_id,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="email != null">
         #{email,jdbcType=VARCHAR},
       </if>
-      <if test="articleId != null">
-        #{articleId,jdbcType=BIGINT},
+      <if test="classifyId != null">
+        #{classifyId,jdbcType=BIGINT},
       </if>
     </trim>
   </insert>

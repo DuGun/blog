@@ -4,12 +4,13 @@
   <resultMap id="BaseResultMap" type="bean.User">
     <id column="email" jdbcType="VARCHAR" property="email" />
     <result column="head" jdbcType="VARCHAR" property="head" />
-    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="user_name" jdbcType="VARCHAR" property="userName" />
+    <result column="good_sun" jdbcType="INTEGER" property="goodSun" />
     <result column="comments_sum" jdbcType="INTEGER" property="commentsSum" />
     <result column="address" jdbcType="VARCHAR" property="address" />
   </resultMap>
   <sql id="Base_Column_List">
-    email, head, name, comments_sum, address
+    email, head, user_name, good_sun, comments_sum, address
   </sql>
   <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
     select 
@@ -22,10 +23,12 @@
     where email = #{email,jdbcType=VARCHAR}
   </delete>
   <insert id="insert" parameterType="bean.User">
-    insert into user (email, head, name, 
-      comments_sum, address)
-    values (#{email,jdbcType=VARCHAR}, #{head,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, 
-      #{commentsSum,jdbcType=INTEGER}, #{address,jdbcType=VARCHAR})
+    insert into user (email, head, user_name, 
+      good_sun, comments_sum, address
+      )
+    values (#{email,jdbcType=VARCHAR}, #{head,jdbcType=VARCHAR}, #{userName,jdbcType=VARCHAR}, 
+      #{goodSun,jdbcType=INTEGER}, #{commentsSum,jdbcType=INTEGER}, #{address,jdbcType=VARCHAR}
+      )
   </insert>
   <insert id="insertSelective" parameterType="bean.User">
     insert into user
@@ -36,8 +39,11 @@
       <if test="head != null">
         head,
       </if>
-      <if test="name != null">
-        name,
+      <if test="userName != null">
+        user_name,
+      </if>
+      <if test="goodSun != null">
+        good_sun,
       </if>
       <if test="commentsSum != null">
         comments_sum,
@@ -53,8 +59,11 @@
       <if test="head != null">
         #{head,jdbcType=VARCHAR},
       </if>
-      <if test="name != null">
-        #{name,jdbcType=VARCHAR},
+      <if test="userName != null">
+        #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="goodSun != null">
+        #{goodSun,jdbcType=INTEGER},
       </if>
       <if test="commentsSum != null">
         #{commentsSum,jdbcType=INTEGER},
@@ -70,8 +79,11 @@
       <if test="head != null">
         head = #{head,jdbcType=VARCHAR},
       </if>
-      <if test="name != null">
-        name = #{name,jdbcType=VARCHAR},
+      <if test="userName != null">
+        user_name = #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="goodSun != null">
+        good_sun = #{goodSun,jdbcType=INTEGER},
       </if>
       <if test="commentsSum != null">
         comments_sum = #{commentsSum,jdbcType=INTEGER},
@@ -85,7 +97,8 @@
   <update id="updateByPrimaryKey" parameterType="bean.User">
     update user
     set head = #{head,jdbcType=VARCHAR},
-      name = #{name,jdbcType=VARCHAR},
+      user_name = #{userName,jdbcType=VARCHAR},
+      good_sun = #{goodSun,jdbcType=INTEGER},
       comments_sum = #{commentsSum,jdbcType=INTEGER},
       address = #{address,jdbcType=VARCHAR}
     where email = #{email,jdbcType=VARCHAR}

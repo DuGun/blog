@@ -1,23 +1,23 @@
 package bean;
 
 public class FixedLocation {
-    private String name;
+    private long fixedId;
 
-    private String nameAs;
+    private String fixedName;
 
-    public String getName() {
-        return name;
+    public long getFixedId() {
+        return fixedId;
     }
 
-    public void setName(String name) {
-        this.name = name == null ? null : name.trim();
+    public void setFixedId(long fixedId) {
+        this.fixedId = fixedId;
     }
 
-    public String getNameAs() {
-        return nameAs;
+    public String getFixedName() {
+        return fixedName;
     }
 
-    public void setNameAs(String nameAs) {
-        this.nameAs = nameAs == null ? null : nameAs.trim();
+    public void setFixedName(String fixedName) {
+        this.fixedName = fixedName == null ? null : fixedName.trim();
     }
 }
