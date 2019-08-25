@@ -15,3 +15,9 @@
 <h1>数据库设计</h1>
 
 ![image](https://github.com/DuGun/blog/blob/master/exploitBlogData/WechatIMG6.png)
+
+![image](https://github.com/DuGun/blog/blob/master/exploitBlogData/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1(%E4%BA%8C).png)
+
+![image](https://github.com/DuGun/blog/blob/master/exploitBlogData/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1(%E4%B8%89).png)
+
+![image](https://github.com/DuGun/blog/blob/master/exploitBlogData/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1(%E5%9B%9B).png)
