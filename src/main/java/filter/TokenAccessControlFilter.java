@@ -18,6 +18,13 @@ import java.io.IOException;
  * 处理登陆的过滤器
  * 2019-4-3
  */
+
+/**
+ * @author 脐橙
+ * @data 2019-09-05 20:30
+ * @Email 847033093@qq.com
+ */
+
 public class TokenAccessControlFilter extends AccessControlFilter {
 
     private Logger logger = LoggerFactory.getLogger(TokenAccessControlFilter.class);

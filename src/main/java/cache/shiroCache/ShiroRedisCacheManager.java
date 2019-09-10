@@ -12,6 +12,12 @@ import org.springframework.data.redis.core.RedisTemplate;
 /**
  * ShiroRedis缓存管理器
  */
+
+/**
+ * @author 脐橙
+ * @data 2019-09-05 20:30
+ * @Email 847033093@qq.com
+ */
 public class ShiroRedisCacheManager implements CacheManager, Destroyable {
 
     private static Logger logger = LoggerFactory.getLogger(ShiroRedisCacheManager.class);

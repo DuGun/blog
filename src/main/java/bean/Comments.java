@@ -1,18 +1,31 @@
 package bean;
 
+import org.hibernate.validator.constraints.Length;
+
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import java.util.Date;
 
+/**
+ * 评论对象
+ */
 public class Comments {
     private long id;
 
+    @NotNull(message = "{validation_comments_parameter_message}")
     private long articleId;
 
     private Date time;
 
+    @NotBlank(message = "{validation_comments_parameter_message}")
+    @Length(max = 39)
     private String userName;
 
+    @NotBlank(message = "{validation_email_rules_message}")
+    //后续加上一个邮箱的正则表达式
     private String email;
 
+    @NotBlank(message = "{validation_comments_parameter_message}")
     private String content;
 
     private String reply;

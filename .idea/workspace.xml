@@ -7,123 +7,232 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5cc0e33c-aa60-4fbf-9a82-c274876f123d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/bean/ArticleAndCommentAndSubfunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/bean/Page.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/messages/BloggerPublishAndDownload.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/messages/WordsPublishAndDownload.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/user/ArticleRelatedC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/user/WordsRelatedC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mapper/BloggerMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/user/ArticleClassifysRelated.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/user/ArticleCommentsRelated.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/user/ArticleSubfunctionRelated.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/user/WordsRelated.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/serviceImpl/user/ArticleClassifysRelatedImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/serviceImpl/user/ArticleCommentsRelatedImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/serviceImpl/user/ArticleSubfunctionRelatedImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/serviceImpl/user/WordsRelatedImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/test/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/test/dao/DaoTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/blog/WEB-INF/classes/bean/ArticleAndCommentAndSubfunction.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/blog/WEB-INF/classes/bean/Page.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/blog/WEB-INF/classes/service/messages/ArticleOperations.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/blog/WEB-INF/classes/service/user/ArticleCommentsRelated.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/blog/WEB-INF/classes/service/user/ArticleSubfunctionRelated.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/blog/WEB-INF/classes/serviceImpl/messages/ArticleOperationsImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/blog/WEB-INF/classes/serviceImpl/user/ArticleCommentsRelatedImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/blog/WEB-INF/classes/serviceImpl/user/ArticleSubfunctionRelatedImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/blog/WEB-INF/classes/test/Test.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/blog/WEB-INF/lib/jsqlparser-1.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/blog/WEB-INF/lib/mybatis-3.4.6.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/blog/WEB-INF/lib/mybatis-spring-1.3.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/blog/WEB-INF/lib/pagehelper-5.1.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/bean/ArticleAndCommentAndSubfunction.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/bean/Page.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/service/messages/ArticleOperations.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/service/user/ArticleCommentsRelated.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/service/user/ArticleSubfunctionRelated.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/serviceImpl/messages/ArticleOperationsImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/serviceImpl/user/ArticleCommentsRelatedImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/serviceImpl/user/ArticleSubfunctionRelatedImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/test/Test.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/bean/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bean/Article.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/bean/Blogger.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bean/ArticleSubfunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bean/ArticleSubfunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bean/Background.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bean/Background.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bean/Blggger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bean/Blogger.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/bean/BloggerLayout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bean/BloggerLayout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bean/Classify.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bean/Classify.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/bean/Comments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bean/Comments.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/bean/FixedLocation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bean/FixedLocation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/bean/Subscription.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bean/Subscription.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/bean/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bean/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cache/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bean/Words.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/bean/Words.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cache/shiroCache/DeserializePrincipalCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cache/shiroCache/DeserializePrincipalCollection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cache/shiroCache/ShiroRedisCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cache/shiroCache/ShiroRedisCache.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ControllerDemo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/messages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/messages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/exception/GlobalExcetion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cache/shiroCache/ShiroRedisCacheManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cache/shiroCache/ShiroRedisCacheManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Test/FileDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/messages/HomePage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/messages/PublishAndDdownload.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/messages/ArticlePublishAndDownload.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exception/ExceptionParameterUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exception/customException/BindingException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exception/customException/FileTypeException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exception/customException/FileTypeException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/exception/solveException/GlobalExcetion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/exception/solveException/GlobalExcetion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/filter/CorsFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/filter/CorsFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/filter/TokenAccessControlFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/filter/TokenAccessControlFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/mapper/ArticleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mapper/ArticleMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mapper/ArticleSubfunctionMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mapper/ArticleSubfunctionMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/mapper/BackgroundMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mapper/BackgroundMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mapper/BlgggerMapper.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/mapper/BloggerLayoutMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mapper/BloggerLayoutMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mapper/BloggerMapper.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/mapper/ClassifyMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mapper/ClassifyMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/mapper/CommentsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mapper/CommentsMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mapper/FixedLocationMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mapper/FixedLocationMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mapper/SubscriptionMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mapper/SubscriptionMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mapper/UserMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/mapper/WordsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mapper/WordsMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/CeShi.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/serviceImpl/CeShiImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/messages/FileOperations.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/messages/HomePage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/shared/Shared.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/messages/ArticleOperations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/serviceImpl/messages/FileOperationsImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/serviceImpl/shared/SharedImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/serviceImpl/messages/ArticleOperationsImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/util/JwtToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/JwtToken.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/util/JwtUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/JwtUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/util/PasswordUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/PasswordUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/util/ResponseBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/ResponseBean.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/util/SnowFlake.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/SnowFlake.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/util/Test.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/database/jdbc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/util/UserRealm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/UserRealm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapperXml/ArticleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapperXml/ArticleMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapperXml/ArticleSubfunctionMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapperXml/ArticleSubfunctionMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapperXml/BackgroundMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapperXml/BackgroundMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapperXml/BlgggerMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapperXml/BloggerMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapperXml/BloggerLayoutMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapperXml/BloggerLayoutMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapperXml/BloggerMapper.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapperXml/ClassifyMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapperXml/ClassifyMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapperXml/CommentsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapperXml/CommentsMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapperXml/FixedLocationMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapperXml/FixedLocationMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapperXml/SubscriptionMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapperXml/SubscriptionMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapperXml/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapperXml/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parameterConfiguration/log4j.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/parameterConfiguration/validation.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/spring/SpringShiro.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring/SpringShiro.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapperXml/WordsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapperXml/WordsMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/spring/springMvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring/springMvc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/spring/springMyBatis.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring/springMyBatis.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/html/admin.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/storeProperties/projectFile.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/storeProperties/projectFile.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/validation.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/validation.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/blog.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/bean/Users.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/cache/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/META-INF/blog.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/bean/Article.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog/WEB-INF/classes/bean/Article.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/bean/ArticleSubfunction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog/WEB-INF/classes/bean/ArticleSubfunction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/bean/Background.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog/WEB-INF/classes/bean/Background.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/bean/Blggger.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/bean/BloggerLayout.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog/WEB-INF/classes/bean/BloggerLayout.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/bean/Classify.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog/WEB-INF/classes/bean/Classify.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/bean/Comments.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog/WEB-INF/classes/bean/Comments.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/bean/FixedLocation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog/WEB-INF/classes/bean/FixedLocation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/bean/Subscription.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog/WEB-INF/classes/bean/Subscription.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/bean/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog/WEB-INF/classes/bean/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/bean/Words.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog/WEB-INF/classes/bean/Words.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/cache/shiroCache/DeserializePrincipalCollection$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog/WEB-INF/classes/cache/shiroCache/DeserializePrincipalCollection$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/cache/shiroCache/DeserializePrincipalCollection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog/WEB-INF/classes/cache/shiroCache/DeserializePrincipalCollection.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/cache/shiroCache/ShiroRedisCache$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog/WEB-INF/classes/cache/shiroCache/ShiroRedisCache$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/cache/shiroCache/ShiroRedisCache$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog/WEB-INF/classes/cache/shiroCache/ShiroRedisCache$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/cache/shiroCache/ShiroRedisCache.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog/WEB-INF/classes/cache/shiroCache/ShiroRedisCache.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/controller/ControllerDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/controller/messages/HomePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog/WEB-INF/classes/controller/messages/HomePage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/database/jdbc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/exception/GlobalExcetion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/mapper/UsersMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/mapperXml/UsersMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/parameterConfiguration/log4j.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/parameterConfiguration/validation.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/service/CeShi.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/serviceImpl/CeShiImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/spring/SpringShiro.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog/WEB-INF/classes/spring/SpringShiro.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/cache/shiroCache/ShiroRedisCacheManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog/WEB-INF/classes/cache/shiroCache/ShiroRedisCacheManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/controller/Test/FileDemo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/controller/messages/HomePage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/controller/messages/PublishAndDdownload.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/exception/ExceptionParameterUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/exception/customException/BindingException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/exception/customException/FileTypeException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog/WEB-INF/classes/exception/customException/FileTypeException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/exception/solveException/GlobalExcetion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog/WEB-INF/classes/exception/solveException/GlobalExcetion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/filter/CorsFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog/WEB-INF/classes/filter/CorsFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/filter/TokenAccessControlFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog/WEB-INF/classes/filter/TokenAccessControlFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/mapper/ArticleMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog/WEB-INF/classes/mapper/ArticleMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/mapper/ArticleSubfunctionMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog/WEB-INF/classes/mapper/ArticleSubfunctionMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/mapper/BackgroundMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog/WEB-INF/classes/mapper/BackgroundMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/mapper/BlgggerMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/mapper/BloggerLayoutMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog/WEB-INF/classes/mapper/BloggerLayoutMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/mapper/ClassifyMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog/WEB-INF/classes/mapper/ClassifyMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/mapper/CommentsMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog/WEB-INF/classes/mapper/CommentsMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/mapper/FixedLocationMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog/WEB-INF/classes/mapper/FixedLocationMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/mapper/WordsMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog/WEB-INF/classes/mapper/WordsMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/mapperXml/ArticleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog/WEB-INF/classes/mapperXml/ArticleMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/mapperXml/ArticleSubfunctionMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog/WEB-INF/classes/mapperXml/ArticleSubfunctionMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/mapperXml/BackgroundMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog/WEB-INF/classes/mapperXml/BackgroundMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/mapperXml/BlgggerMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/mapperXml/BloggerLayoutMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog/WEB-INF/classes/mapperXml/BloggerLayoutMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/mapperXml/ClassifyMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog/WEB-INF/classes/mapperXml/ClassifyMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/mapperXml/CommentsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog/WEB-INF/classes/mapperXml/CommentsMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/mapperXml/FixedLocationMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog/WEB-INF/classes/mapperXml/FixedLocationMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/mapperXml/WordsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog/WEB-INF/classes/mapperXml/WordsMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/service/messages/FileOperations.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/service/messages/HomePage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/service/shared/Shared.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/serviceImpl/messages/FileOperationsImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/serviceImpl/shared/SharedImpl.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/spring/springMvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog/WEB-INF/classes/spring/springMvc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/spring/springMyBatis.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog/WEB-INF/classes/spring/springMyBatis.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/storeProperties/projectFile.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog/WEB-INF/classes/storeProperties/projectFile.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/util/JwtToken.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog/WEB-INF/classes/util/JwtToken.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/util/JwtUtil$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog/WEB-INF/classes/util/JwtUtil$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/util/JwtUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog/WEB-INF/classes/util/JwtUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/util/PasswordUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog/WEB-INF/classes/util/PasswordUtil.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/util/ResponseBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog/WEB-INF/classes/util/ResponseBean.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/util/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/util/SnowFlake.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog/WEB-INF/classes/util/SnowFlake.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/util/UserRealm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog/WEB-INF/classes/util/UserRealm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/html/admin.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/validation.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog/WEB-INF/classes/validation.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/lib/mybatis-3.2.6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/lib/mybatis-spring-1.2.2.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/blog/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/blog/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/blog.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/bean/Article.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bean/Article.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bean/ArticleSubfunction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bean/ArticleSubfunction.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/bean/Background.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bean/Background.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/bean/Blogger.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bean/Blggger.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/bean/BloggerLayout.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bean/BloggerLayout.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/bean/Classify.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bean/Classify.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/bean/Comments.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bean/Comments.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/bean/CommentsWithBLOBs.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/bean/FixedLocationKey.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/bean/SubscriptionKey.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bean/FixedLocation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bean/FixedLocation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bean/Subscription.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bean/Subscription.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/bean/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bean/User.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/bean/Words.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bean/Words.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/cache/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cache/shiroCache/DeserializePrincipalCollection$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cache/shiroCache/DeserializePrincipalCollection$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cache/shiroCache/DeserializePrincipalCollection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cache/shiroCache/DeserializePrincipalCollection.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cache/shiroCache/ShiroRedisCache$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cache/shiroCache/ShiroRedisCache$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cache/shiroCache/ShiroRedisCache$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cache/shiroCache/ShiroRedisCache$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/cache/shiroCache/ShiroRedisCache.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cache/shiroCache/ShiroRedisCache.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/ControllerDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/database/jdbc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/exception/GlobalExcetion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cache/shiroCache/ShiroRedisCacheManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cache/shiroCache/ShiroRedisCacheManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/Test/FileDemo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/messages/HomePage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/messages/PublishAndDdownload.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/exception/ExceptionParameterUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/exception/customException/BindingException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/exception/customException/FileTypeException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/exception/customException/FileTypeException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/exception/solveException/GlobalExcetion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/exception/solveException/GlobalExcetion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/filter/CorsFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/filter/CorsFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/filter/TokenAccessControlFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/filter/TokenAccessControlFilter.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/mapper/ArticleMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/ArticleMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/ArticleSubfunctionMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/ArticleSubfunctionMapper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/mapper/BackgroundMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/BackgroundMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/BlgggerMapper.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/mapper/BloggerLayoutMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/BloggerLayoutMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/BloggerMapper.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/mapper/ClassifyMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/ClassifyMapper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/mapper/CommentsMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/CommentsMapper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/mapper/FixedLocationMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/FixedLocationMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/SubscriptionMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/SubscriptionMapper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/mapper/WordsMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/WordsMapper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/mapperXml/ArticleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapperXml/ArticleMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapperXml/ArticleSubfunctionMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapperXml/ArticleSubfunctionMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/mapperXml/BackgroundMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapperXml/BackgroundMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapperXml/BlgggerMapper.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/mapperXml/BloggerLayoutMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapperXml/BloggerLayoutMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapperXml/BloggerMapper.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/mapperXml/ClassifyMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapperXml/ClassifyMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/mapperXml/CommentsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapperXml/CommentsMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/mapperXml/FixedLocationMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapperXml/FixedLocationMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapperXml/SubscriptionMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapperXml/SubscriptionMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapperXml/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapperXml/UserMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/mapperXml/WordsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapperXml/WordsMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parameterConfiguration/log4j.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/parameterConfiguration/validation.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/CeShi.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/serviceImpl/CeShiImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/spring/SpringShiro.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spring/SpringShiro.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/messages/FileOperations.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/messages/HomePage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/shared/Shared.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/serviceImpl/messages/FileOperationsImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/serviceImpl/shared/SharedImpl.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/spring/springMvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spring/springMvc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/spring/springMyBatis.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spring/springMyBatis.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/storeProperties/projectFile.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/storeProperties/projectFile.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/util/JwtToken.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/util/JwtToken.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/util/JwtUtil$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/util/JwtUtil$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/util/JwtUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/util/JwtUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/util/PasswordUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/util/PasswordUtil.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/util/ResponseBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/util/ResponseBean.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/util/SnowFlake.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/util/SnowFlake.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/util/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/util/UserRealm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/util/UserRealm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/validation.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/validation.properties" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -153,13 +262,49 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/exception/solveException/GlobalExcetion.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controller/user/ArticleRelatedC.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="424">
-              <caret line="116" column="35" selection-start-line="116" selection-start-column="35" selection-end-line="116" selection-end-column="35" />
+            <state relative-caret-position="158">
+              <caret line="49" column="75" selection-start-line="49" selection-start-column="65" selection-end-line="49" selection-end-column="75" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/serviceImpl/user/ArticleRelatedImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2070">
+              <caret line="153" column="21" lean-forward="true" selection-start-line="153" selection-start-column="21" selection-end-line="153" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mapperXml/ArticleMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="241">
+              <caret line="47" column="55" selection-start-line="47" selection-start-column="55" selection-end-line="47" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/bean/Page.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="24" selection-start-line="24" selection-end-line="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/service/user/ArticleRelated.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -178,31 +323,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>spring-test</find>
-      <find>junit</find>
-      <find>ju</find>
-      <find>需要</find>
-      <find>ali</find>
-      <find>jedisConnectionFactory</find>
-      <find>LocalDate</find>
-      <find>projectFile_article_type</find>
-      <find>Long</find>
-      <find>updateByPrimaryKey</find>
+      <find>uploadArticleAttachmentFile</find>
+      <find>uploadArticlethumbnailFile</find>
+      <find>validation_article_status_message</find>
+      <find>uploadArticleDatabase</find>
+      <find>uploadArticleFile</find>
+      <find>uploadClassify</find>
+      <find>deleteByPrimaryKeyAll</find>
+      <find>setting</find>
+      <find>insertAll</find>
+      <find>sqlSessionFactoryBean</find>
+      <find>updateRankByNameCIdFP</find>
+      <find>fixedBackground</find>
+      <find>BackgroundOperations</find>
+      <find>ArticleOperations</find>
+      <find>bloggerLayoutMapper</find>
+      <find>data_table_blogger_layout_background</find>
+      <find>selectByFiexdPlace</find>
+      <find>getPage</find>
       <find>selectByPrimaryKey</find>
-      <find>ResultMapWithBLOBs</find>
-      <find>Base_Column_List</find>
-      <find>CommentsWithBLOBs</find>
-      <find>FixedLocationKey</find>
-      <find>SubscriptionKey</find>
-      <find>Key</find>
-      <find>BloggerLayoutKey</find>
-      <find>validation</find>
-      <find>map.put</find>
-      <find>BindingException</find>
-      <find>validationExceptionResolver</find>
-      <find>shouldRenderDefaultMessage</find>
-      <find>selectClassifyIds</find>
-      <find>FileTypeException</find>
+      <find>LIMIT</find>
+      <find>selectAllExcludeArticle</find>
+      <find>showBackground</find>
+      <find>selectByPrimaryKeys</find>
+      <find>articleMapper</find>
+      <find>excludeAndLimitQuantities</find>
+      <find>getAllArticle</find>
+      <find>getTopExcludeOfLimitQuantities</find>
+      <find>selectByFiexdPlaceLimit</find>
+      <find>count</find>
+      <find>getTopArticles</find>
     </findStrings>
     <replaceStrings>
       <replace>BaseResultMap</replace>
@@ -211,6 +361,10 @@
       <replace>Subscription</replace>
       <replace>BloggerLayout</replace>
       <replace>long</replace>
+      <replace>LackParameterException</replace>
+      <replace>fileOperationsUtil</replace>
+      <replace>backgroundList</replace>
+      <replace>SystemBindingException</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -219,57 +373,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/util/Test.java" />
-        <option value="$PROJECT_DIR$/src/main/java/mapper/WordsMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/ControllerDemo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cache/shiroCache/ShiroRedisCache.java" />
-        <option value="$PROJECT_DIR$/src/main/java/exception/GlobalExcetion.java" />
-        <option value="$PROJECT_DIR$/src/main/java/util/JwtToken.java" />
-        <option value="$PROJECT_DIR$/src/main/java/mapper/ArticleMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/test/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/blogResources/article/files/demo.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/database/projectFile.properties" />
-        <option value="$PROJECT_DIR$/src/main/resources/parameterConfiguration/log4j.properties" />
-        <option value="$PROJECT_DIR$/src/main/resources/log4j.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/util/ResponseBean.java" />
-        <option value="$PROJECT_DIR$/src/main/java/exception/customException/ImgTypeException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/exception/ExceptionParameterUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/bean/Test.java" />
-        <option value="$PROJECT_DIR$/src/main/java/bean/Test2.java" />
-        <option value="$PROJECT_DIR$/src/main/java/filter/CorsFilter.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/service/shared/HandleFile.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/storeProperties/projectFile.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/serviceImpl/shared/HandleFileImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/serviceImpl/shared/FileOperationsImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/Test/FileDemo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/util/SnowFlake.java" />
-        <option value="$PROJECT_DIR$/src/main/java/mapper/SubscriptionMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/service/shared/Shared.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapperXml/ArticleMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapperXml/ArticleSubfunctionMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapperXml/CommentsMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapperXml/FixedLocationMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapperXml/SubscriptionMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapperXml/BloggerLayoutMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/storeProperties/jdbc.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/exception/customException/FileTypeException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/service/user/BloggerRelated.java" />
+        <option value="$PROJECT_DIR$/src/main/java/service/user/WordsRelated.java" />
         <option value="$PROJECT_DIR$/src/main/java/exception/customException/BindingException.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/storeProperties/validation.properties" />
-        <option value="$PROJECT_DIR$/src/main/resources/spring/springMyBatis.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/test/ValidationExceptionResovler.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/spring/springMvc.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/storeProperties/projectOther.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/exception/customException/UserDataIllegalException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/exception/customException/SystemDataIllegalException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/exception/customException/FixedLocationException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/exception/customException/WrongParameterException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/exception/customException/SystemInvalidParameterException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bean/Background.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/messages/ClassifysPublishAndDownload.java" />
+        <option value="$PROJECT_DIR$/src/main/java/util/FileOperationsUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/service/messages/BackgroundOperations.java" />
+        <option value="$PROJECT_DIR$/src/main/java/util/PasswordUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bean/Blogger.java" />
+        <option value="$PROJECT_DIR$/src/main/java/mapper/BloggerMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/user/BackgroundRelatedC.java" />
+        <option value="$PROJECT_DIR$/src/main/java/serviceImpl/user/BackgroundRelatedImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/test/bean/Users.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bean/User.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/exception/customException/FileTypeException.java" />
         <option value="$PROJECT_DIR$/src/main/resources/validation.properties" />
         <option value="$PROJECT_DIR$/src/main/java/bean/Article.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapperXml/ClassifyMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/mapper/ClassifyMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/serviceImpl/shared/SharedImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/serviceImpl/messages/FileOperationsImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/messages/HomePage.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/spring/SpringShiro.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/controller/messages/PublishAndDdownload.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/storeProperties/projectFile.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/service/messages/BloggerOperations.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapperXml/BloggerMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/messages/BloggerPublishAndDownload.java" />
+        <option value="$PROJECT_DIR$/src/main/java/serviceImpl/messages/BloggerOperationsImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/serviceImpl/messages/ClassifyOperationsImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/serviceImpl/messages/FixedLocationOperationsImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/messages/WordsPublishAndDownload.java" />
         <option value="$PROJECT_DIR$/src/main/java/exception/solveException/GlobalExcetion.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bean/Words.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/messages/BackgroundPublishAndDownload.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bean/BloggerLayout.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/spring/springMyBatis.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapperXml/BloggerLayoutMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/util/DatabaseParameter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/serviceImpl/messages/BackgroundOperationsImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/user/WordsRelatedC.java" />
+        <option value="$PROJECT_DIR$/src/main/java/service/messages/ArticleOperations.java" />
+        <option value="$PROJECT_DIR$/src/main/java/serviceImpl/messages/ArticleOperationsImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/messages/ArticlePublishAndDownload.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/storeProperties/projectDataTable.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/service/user/ArticleRelated.java" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/user/ArticleRelatedC.java" />
+        <option value="$PROJECT_DIR$/src/main/java/bean/Page.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapperXml/ArticleMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/mapper/ArticleMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/serviceImpl/user/ArticleRelatedImpl.java" />
       </list>
     </option>
   </component>
@@ -318,6 +472,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -343,106 +498,11 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="exception" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="exception" type="462c0819:PsiDirectoryNode" />
-              <item name="customException" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="exception" type="462c0819:PsiDirectoryNode" />
-              <item name="solveException" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="messages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="shared" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="serviceImpl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="serviceImpl" type="462c0819:PsiDirectoryNode" />
-              <item name="messages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="serviceImpl" type="462c0819:PsiDirectoryNode" />
-              <item name="shared" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -450,7 +510,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/storeProperties" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -462,27 +522,28 @@
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources" />
-      <recent name="$PROJECT_DIR$/src/main/resources/mapperXml" />
-      <recent name="$PROJECT_DIR$/src/main/java/mapper" />
-      <recent name="$PROJECT_DIR$/src/main/java/bean" />
-      <recent name="$PROJECT_DIR$/src/main/resources/storeProperties" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="filter" />
-      <recent name="mapper" />
-      <recent name="bean" />
-      <recent name="cache.shiroCache" />
-      <recent name="util" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/main/resources/database" />
       <recent name="$PROJECT_DIR$/src/main/webapp/blogResources/test" />
       <recent name="$PROJECT_DIR$/src/main/webapp" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="exception.customException" />
+      <recent name="mapper" />
+      <recent name="bean" />
+      <recent name="filter" />
+      <recent name="cache.shiroCache" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/storeProperties" />
+      <recent name="$PROJECT_DIR$/src/main/resources/mapperXml" />
+      <recent name="$PROJECT_DIR$/exploitBlogData" />
+      <recent name="$PROJECT_DIR$/introduceMkdir" />
+      <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -498,70 +559,7 @@
     </option>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.13">
-    <configuration name="FileDemo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="blog" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="controller.Test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="controller.Test" />
-      <option name="MAIN_CLASS_NAME" value="controller.Test.FileDemo" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FileDemo.xixi" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="blog" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="controller.Test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="controller.Test" />
-      <option name="MAIN_CLASS_NAME" value="controller.Test.FileDemo" />
-      <option name="METHOD_NAME" value="xixi" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FileOperationsImpl.haha" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="blog" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="serviceImpl.messages.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="serviceImpl.messages" />
-      <option name="MAIN_CLASS_NAME" value="serviceImpl.messages.FileOperationsImpl" />
-      <option name="METHOD_NAME" value="haha" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FileOperationsImpl.xixi" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="blog" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="serviceImpl.messages.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="serviceImpl.messages" />
-      <option name="MAIN_CLASS_NAME" value="serviceImpl.messages.FileOperationsImpl" />
-      <option name="METHOD_NAME" value="xixi" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PublishAndDdownload.ss" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ArticlePublishAndDownload.te" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="blog" />
       <extension name="coverage">
         <pattern>
@@ -570,8 +568,72 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="controller.messages" />
-      <option name="MAIN_CLASS_NAME" value="controller.messages.PublishAndDdownload" />
-      <option name="METHOD_NAME" value="ss" />
+      <option name="MAIN_CLASS_NAME" value="controller.messages.ArticlePublishAndDownload" />
+      <option name="METHOD_NAME" value="te" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BackgroundPublishAndDownload.xixi" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="blog" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="controller.messages.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="controller.messages" />
+      <option name="MAIN_CLASS_NAME" value="controller.messages.BackgroundPublishAndDownload" />
+      <option name="METHOD_NAME" value="xixi" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DaoTests.opo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="blog" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test.dao" />
+      <option name="MAIN_CLASS_NAME" value="test.dao.DaoTests" />
+      <option name="METHOD_NAME" value="opo" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DaoTests.qaqqq" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="blog" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test.dao" />
+      <option name="MAIN_CLASS_NAME" value="test.dao.DaoTests" />
+      <option name="METHOD_NAME" value="qaqqq" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PasswordUtil.s" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="blog" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="util" />
+      <option name="MAIN_CLASS_NAME" value="util.PasswordUtil" />
+      <option name="METHOD_NAME" value="s" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -651,20 +713,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.FileOperationsImpl.xixi" />
-      <item itemvalue="JUnit.FileOperationsImpl.haha" />
-      <item itemvalue="JUnit.FileDemo" />
-      <item itemvalue="JUnit.FileDemo.xixi" />
-      <item itemvalue="JUnit.PublishAndDdownload.ss" />
+      <item itemvalue="JUnit.DaoTests.opo" />
+      <item itemvalue="JUnit.DaoTests.qaqqq" />
+      <item itemvalue="JUnit.PasswordUtil.s" />
+      <item itemvalue="JUnit.ArticlePublishAndDownload.te" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.13" />
+      <item itemvalue="JUnit.BackgroundPublishAndDownload.xixi" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PublishAndDdownload.ss" />
-        <item itemvalue="JUnit.FileDemo.xixi" />
-        <item itemvalue="JUnit.FileOperationsImpl.xixi" />
-        <item itemvalue="JUnit.FileOperationsImpl.haha" />
-        <item itemvalue="JUnit.FileDemo" />
+        <item itemvalue="JUnit.BackgroundPublishAndDownload.xixi" />
+        <item itemvalue="JUnit.ArticlePublishAndDownload.te" />
+        <item itemvalue="JUnit.PasswordUtil.s" />
+        <item itemvalue="JUnit.DaoTests.qaqqq" />
+        <item itemvalue="JUnit.DaoTests.opo" />
       </list>
     </recent_temporary>
   </component>
@@ -687,44 +749,48 @@
       <workItem from="1566133837607" duration="74143000" />
       <workItem from="1566492020641" duration="25342000" />
       <workItem from="1566593441709" duration="16203000" />
-      <workItem from="1566710529511" duration="14653000" />
+      <workItem from="1566710529511" duration="16401000" />
+      <workItem from="1566738993920" duration="77720000" />
+      <workItem from="1566993471793" duration="55968000" />
+      <workItem from="1567497306239" duration="121993000" />
+      <workItem from="1567864610289" duration="45711000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="HandleFileImpl_haha - 2019.08.22 at 16h 29m 27s.xml">
-      <configuration name="HandleFileImpl.haha" configurationId="JUnit" />
+    <history-entry file="DaoTests_qaqqq - 2019.09.05 at 18h 25m 32s.xml">
+      <configuration name="DaoTests.qaqqq" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FileDemo - 2019.08.22 at 16h 30m 12s.xml">
-      <configuration name="FileDemo" configurationId="JUnit" />
+    <history-entry file="DaoTests_qaqqq - 2019.09.05 at 18h 25m 53s.xml">
+      <configuration name="DaoTests.qaqqq" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HandleFileImpl_haha - 2019.08.22 at 17h 22m 29s.xml">
-      <configuration name="HandleFileImpl.haha" configurationId="JUnit" />
+    <history-entry file="PasswordUtil_s - 2019.09.07 at 16h 23m 54s.xml">
+      <configuration name="PasswordUtil.s" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HandleFileImpl_xixi - 2019.08.22 at 23h 05m 01s.xml">
-      <configuration name="HandleFileImpl.xixi" configurationId="JUnit" />
+    <history-entry file="PasswordUtil_s - 2019.09.07 at 16h 24m 59s.xml">
+      <configuration name="PasswordUtil.s" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HandleFileImpl_xixi - 2019.08.22 at 23h 05m 12s.xml">
-      <configuration name="HandleFileImpl.xixi" configurationId="JUnit" />
+    <history-entry file="ArticlePublishAndDownload_te - 2019.09.07 at 18h 09m 06s.xml">
+      <configuration name="ArticlePublishAndDownload.te" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HandleFileImpl_xixi - 2019.08.22 at 23h 05m 17s.xml">
-      <configuration name="HandleFileImpl.xixi" configurationId="JUnit" />
+    <history-entry file="ArticlePublishAndDownload_te - 2019.09.07 at 18h 15m 32s.xml">
+      <configuration name="ArticlePublishAndDownload.te" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FileDemo_xixi - 2019.08.23 at 01h 43m 10s.xml">
-      <configuration name="FileDemo.xixi" configurationId="JUnit" />
+    <history-entry file="ArticlePublishAndDownload_te - 2019.09.07 at 18h 37m 07s.xml">
+      <configuration name="ArticlePublishAndDownload.te" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FileDemo_xixi - 2019.08.23 at 01h 45m 00s.xml">
-      <configuration name="FileDemo.xixi" configurationId="JUnit" />
+    <history-entry file="BackgroundPublishAndDownload_xixi - 2019.09.08 at 01h 50m 52s.xml">
+      <configuration name="BackgroundPublishAndDownload.xixi" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FileDemo_xixi - 2019.08.23 at 05h 10m 44s.xml">
-      <configuration name="FileDemo.xixi" configurationId="JUnit" />
+    <history-entry file="BackgroundPublishAndDownload_xixi - 2019.09.08 at 01h 51m 22s.xml">
+      <configuration name="BackgroundPublishAndDownload.xixi" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PublishAndDdownload_ss - 2019.08.24 at 17h 32m 10s.xml">
-      <configuration name="PublishAndDdownload.ss" configurationId="JUnit" />
+    <history-entry file="BackgroundPublishAndDownload_xixi - 2019.09.08 at 01h 57m 04s.xml">
+      <configuration name="BackgroundPublishAndDownload.xixi" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="170255000" />
+    <option name="totallyTimeSpent" value="473395000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -737,25 +803,24 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1941392" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23076923" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info id="Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.2010204" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.27653062" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.29795918" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.25408164" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.5234694" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Spring" order="9" />
+      <window_info anchor="bottom" id="Spring" order="9" weight="0.32959184" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.24489796" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.14183673" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="13" weight="0.32959184" />
       <window_info anchor="bottom" id="Application Servers" order="14" weight="0.3297414" />
@@ -768,6 +833,36 @@
       <window_info anchor="right" id="Bean Validation" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23015873" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Web" order="2" side_tool="true" />
+      <window_info id="Designer" order="3" />
+      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.2010204" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.23571429" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.44183674" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Spring" order="9" weight="0.32959184" />
+      <window_info anchor="bottom" id="Database Changes" order="10" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.14183673" />
+      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.32959184" />
+      <window_info anchor="bottom" id="Application Servers" order="14" weight="0.3297414" />
+      <window_info anchor="bottom" id="Java Enterprise" order="15" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" weight="0.32967034" />
+      <window_info anchor="right" id="Maven" order="4" weight="0.32967034" />
+      <window_info anchor="right" id="Bean Validation" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -777,408 +872,497 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/cache/shiroCache/ShiroRedisCache.java</url>
-          <line>84</line>
+          <line>91</line>
           <properties />
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/filter/TokenAccessControlFilter.java</url>
-          <line>57</line>
+          <line>64</line>
           <properties />
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/controller/messages/PublishAndDdownload.java</url>
-          <line>78</line>
+          <url>file://$PROJECT_DIR$/src/main/java/test/dao/DaoTests.java</url>
+          <line>141</line>
           <properties />
-          <option name="timeStamp" value="86" />
+          <option name="timeStamp" value="91" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/controller/messages/PublishAndDdownload.java</url>
-          <line>88</line>
+          <url>file://$PROJECT_DIR$/src/main/java/test/dao/DaoTests.java</url>
+          <line>83</line>
           <properties />
-          <option name="timeStamp" value="87" />
+          <option name="timeStamp" value="98" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-field">
-          <url>file://$PROJECT_DIR$/src/main/java/serviceImpl/messages/FileOperationsImpl.java</url>
-          <line>26</line>
-          <properties field="article_file" class="serviceImpl.messages.FileOperationsImpl" />
-          <option name="timeStamp" value="40" />
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/test/dao/DaoTests.java</url>
+          <line>203</line>
+          <properties />
+          <option name="timeStamp" value="117" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/test/dao/DaoTests.java</url>
+          <line>194</line>
+          <properties />
+          <option name="timeStamp" value="123" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/controller/test/Test01.java</url>
+          <line>54</line>
+          <properties />
+          <option name="timeStamp" value="152" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/test/dao/DaoTests.java</url>
+          <line>225</line>
+          <properties />
+          <option name="timeStamp" value="188" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/test/dao/DaoTests.java</url>
+          <line>271</line>
+          <properties />
+          <option name="timeStamp" value="236" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/exception/solveException/GlobalExcetion.java</url>
+          <line>238</line>
+          <properties />
+          <option name="timeStamp" value="242" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/exception/solveException/GlobalExcetion.java</url>
+          <line>81</line>
+          <properties />
+          <option name="timeStamp" value="267" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/serviceImpl/user/BackgroundRelatedImpl.java</url>
+          <line>38</line>
+          <properties />
+          <option name="timeStamp" value="284" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/serviceImpl/user/BackgroundRelatedImpl.java</url>
+          <line>35</line>
+          <properties />
+          <option name="timeStamp" value="285" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/bean/BloggerLayout.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/bean/Blogger.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="12" column="12" lean-forward="true" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+        <state relative-caret-position="120">
+          <caret line="8" column="27" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapperXml/CommentsMapper.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/storeProperties/projectFile.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="29" lean-forward="true" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+        <state relative-caret-position="300">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapperXml/FixedLocationMapper.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/messages/BloggerOperations.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="20" column="17" lean-forward="true" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+        <state relative-caret-position="151">
+          <caret line="16" column="11" lean-forward="true" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapperXml/SubscriptionMapper.xml">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.5.RELEASE/spring-web-5.0.5.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+        <state relative-caret-position="153">
+          <caret line="127" selection-start-line="127" selection-end-line="127" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/shared/Shared.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/serviceImpl/messages/BloggerOperationsImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="400">
+          <caret line="174" selection-start-line="174" selection-end-line="174" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapperXml/BlgggerMapper.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/serviceImpl/messages/ClassifyOperationsImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="25" column="13" lean-forward="true" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+        <state relative-caret-position="237">
+          <caret line="42" column="39" lean-forward="true" selection-start-line="42" selection-start-column="39" selection-end-line="42" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapperXml/BloggerLayoutMapper.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/messages/ClassifysPublishAndDownload.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapperXml/BackgroundMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="39" column="11" selection-start-line="39" selection-start-column="11" selection-end-line="39" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapperXml/ArticleMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-293">
-          <caret line="35" column="29" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/storeProperties/jdbc.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="44" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.0.5.RELEASE/spring-context-5.0.5.RELEASE.jar!/org/springframework/validation/BindException.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="27" column="28" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
+        <state relative-caret-position="185">
+          <caret line="40" column="41" selection-start-line="40" selection-start-column="27" selection-end-line="40" selection-end-column="41" />
           <folding>
-            <element signature="e#930#931#0" expanded="true" />
-            <element signature="e#971#972#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/validation.properties" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/exception/customException/FileTypeException.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/serviceImpl/messages/FixedLocationOperationsImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="247">
+          <caret line="41" column="61" selection-start-line="41" selection-start-column="61" selection-end-line="41" selection-end-column="61" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.5.RELEASE/spring-web-5.0.5.RELEASE.jar!/org/springframework/http/HttpStatus.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/messages/FixedLocationPublishAndDownload.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="37" column="4" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="4" />
+        <state relative-caret-position="95">
+          <caret line="36" column="39" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/target/blog/WEB-INF/classes/storeProperties/validation.properties">
+    <entry file="file://$PROJECT_DIR$/src/main/java/bean/Subscription.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="29" lean-forward="true" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+        <state relative-caret-position="210">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.0.5.RELEASE/spring-context-5.0.5.RELEASE.jar!/org/springframework/validation/FieldError.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="29" column="18" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
+          <folding>
+            <element signature="e#1113#1114#0" expanded="true" />
+            <element signature="e#1146#1147#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/serviceImpl/messages/WordsOperationsImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="26" column="35" lean-forward="true" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/exception/solveException/GlobalExcetion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="223" column="64" selection-start-line="223" selection-start-column="64" selection-end-line="223" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/messages/WordsPublishAndDownload.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="35" column="38" selection-start-line="35" selection-start-column="38" selection-end-line="35" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/messages/BloggerPublishAndDownload.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="58" column="31" selection-start-line="58" selection-start-column="31" selection-end-line="58" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/spring/springMyBatis.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="78" selection-start-line="31" selection-start-column="78" selection-end-line="31" selection-end-column="78" />
+        <state relative-caret-position="233">
+          <caret line="55" column="11" lean-forward="true" selection-start-line="55" selection-start-column="11" selection-end-line="59" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/test/ValidationExceptionResovler.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.0.5.RELEASE/spring-core-5.0.5.RELEASE.jar!/org/springframework/cglib/proxy/MethodProxy.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="49" column="34" lean-forward="true" selection-start-line="49" selection-start-column="34" selection-end-line="49" selection-end-column="34" />
+        <state relative-caret-position="120">
+          <caret line="104" selection-start-line="104" selection-end-line="104" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bean/Words.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="34" column="5" lean-forward="true" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1768#1784#0" expanded="true" />
+            <element signature="e#325#326#0" expanded="true" />
+            <element signature="e#348#349#0" expanded="true" />
+            <element signature="e#375#376#0" expanded="true" />
+            <element signature="e#400#401#0" expanded="true" />
+            <element signature="e#434#435#0" expanded="true" />
+            <element signature="e#462#463#0" expanded="true" />
+            <element signature="e#496#497#0" expanded="true" />
+            <element signature="e#526#527#0" expanded="true" />
+            <element signature="e#572#573#0" expanded="true" />
+            <element signature="e#642#643#0" expanded="true" />
+            <element signature="e#671#672#0" expanded="true" />
+            <element signature="e#698#699#0" expanded="true" />
+            <element signature="e#736#737#0" expanded="true" />
+            <element signature="e#768#769#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/springMvc.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/util/DatabaseParameter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="648">
+          <caret line="70" column="29" selection-start-line="70" selection-start-column="29" selection-end-line="70" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bean/BloggerLayout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding>
+            <element signature="e#218#219#0" expanded="true" />
+            <element signature="e#250#251#0" expanded="true" />
+            <element signature="e#300#301#0" expanded="true" />
+            <element signature="e#342#343#0" expanded="true" />
+            <element signature="e#381#382#0" expanded="true" />
+            <element signature="e#418#419#0" expanded="true" />
+            <element signature="e#476#477#0" expanded="true" />
+            <element signature="e#528#529#0" expanded="true" />
+            <element signature="e#561#562#0" expanded="true" />
+            <element signature="e#593#594#0" expanded="true" />
+            <element signature="e#640#641#0" expanded="true" />
+            <element signature="e#682#683#0" expanded="true" />
+            <element signature="e#717#718#0" expanded="true" />
+            <element signature="e#750#751#0" expanded="true" />
+            <element signature="e#800#801#0" expanded="true" />
+            <element signature="e#844#845#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/test/dao/DaoTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="507">
+          <caret line="81" lean-forward="true" selection-start-line="81" selection-end-line="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapperXml/BloggerMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="68" column="25" selection-start-line="68" selection-start-column="25" selection-end-line="68" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/storeProperties/jdbc.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="18" lean-forward="true" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/serviceImpl/user/ArticleClassifysRelatedImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/messages/ArticlePublishAndDownload.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="66" column="21" lean-forward="true" selection-start-line="66" selection-start-column="21" selection-end-line="66" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/messages/BackgroundPublishAndDownload.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="100" column="17" lean-forward="true" selection-start-line="99" selection-start-column="4" selection-end-line="100" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/serviceImpl/messages/BackgroundOperationsImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="39">
+          <caret line="34" column="69" selection-start-line="34" selection-start-column="49" selection-end-line="34" selection-end-column="69" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1475#1516#1" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/storeProperties/projectOther.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/storeProperties/projectFile.properties">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/storeProperties/projectDataTable.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.0.5.RELEASE/spring-context-5.0.5.RELEASE.jar!/org/springframework/context/support/DefaultMessageSourceResolvable.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.0.5.RELEASE/spring-context-5.0.5.RELEASE.jar!/org/springframework/validation/ObjectError.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="11" column="52" selection-start-line="11" selection-start-column="52" selection-end-line="11" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.5.RELEASE/spring-webmvc-5.0.5.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/ExceptionHandlerExceptionResolver.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="273" selection-start-line="273" selection-end-line="273" />
+        <state relative-caret-position="45">
+          <caret line="3" column="30" selection-start-line="3" selection-end-line="3" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapperXml/ArticleSubfunctionMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mapper/WordsMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mapper/UserMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mapper/SubscriptionMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mapper/FixedLocationMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mapper/CommentsMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mapper/BloggerLayoutMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mapper/BlgggerMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mapper/BackgroundMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        <state relative-caret-position="333">
+          <caret line="65" column="37" lean-forward="true" selection-start-line="65" selection-start-column="37" selection-end-line="65" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/mapper/ArticleSubfunctionMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        <state relative-caret-position="135">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.5.RELEASE/spring-webmvc-5.0.5.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/mapper/BackgroundMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="474" selection-start-line="474" selection-end-line="474" />
+        <state relative-caret-position="135">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.5.RELEASE/spring-webmvc-5.0.5.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/RequestMappingHandlerAdapter.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/mapper/BloggerLayoutMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="568" selection-start-line="568" selection-end-line="568" />
+        <state relative-caret-position="120">
+          <caret line="10" column="3" lean-forward="true" selection-start-line="9" selection-start-column="26" selection-end-line="10" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.5.RELEASE/spring-web-5.0.5.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/messages/BackgroundOperations.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="129" selection-start-line="129" selection-end-line="129" />
+        <state relative-caret-position="347">
+          <caret line="30" column="14" lean-forward="true" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.0.5.RELEASE/spring-core-5.0.5.RELEASE.jar!/org/springframework/cglib/proxy/MethodProxy.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/serviceImpl/user/BackgroundRelatedImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="105" selection-start-line="105" selection-end-line="105" />
+        <state relative-caret-position="200">
+          <caret line="44" column="76" selection-start-line="44" selection-start-column="76" selection-end-line="44" selection-end-column="76" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-tx/5.0.5.RELEASE/spring-tx-5.0.5.RELEASE.jar!/org/springframework/transaction/interceptor/TransactionAspectSupport.class">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapperXml/BackgroundMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="180" selection-start-line="180" selection-end-line="180" />
+        <state relative-caret-position="158">
+          <caret line="34" column="13" lean-forward="true" selection-start-line="34" selection-start-column="7" selection-end-line="34" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/5.0.5.RELEASE/spring-aop-5.0.5.RELEASE.jar!/org/springframework/aop/framework/CglibAopProxy.class">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapperXml/BloggerLayoutMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="511" selection-start-line="511" selection-end-line="511" />
+        <state relative-caret-position="225">
+          <caret line="15" column="43" lean-forward="true" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mapper/ClassifyMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/messages/ArticleOperations.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="22" lean-forward="true" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+        <state relative-caret-position="231">
+          <caret line="45" column="36" lean-forward="true" selection-start-line="45" selection-start-column="36" selection-end-line="45" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapperXml/ClassifyMapper.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/serviceImpl/messages/ArticleOperationsImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="20" column="59" selection-start-line="20" selection-start-column="59" selection-end-line="20" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/exception/customException/BindingException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/serviceImpl/messages/FileOperationsImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="139" lean-forward="true" selection-start-line="139" selection-end-line="139" />
+        <state relative-caret-position="364">
+          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring/SpringShiro.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/messages/WordsOperations.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/messages/FixedLocationOperations.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/user/WordsRelatedC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="22" column="13" lean-forward="true" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/user/ClassifyRelatedC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="26" column="13" lean-forward="true" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/user/BloggerRelatedC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="543">
+          <caret line="51" column="25" lean-forward="true" selection-start-line="51" selection-start-column="25" selection-end-line="51" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/user/BackgroundRelatedC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="36" column="34" lean-forward="true" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/bean/Page.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
-          <caret line="20" column="29" lean-forward="true" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/messages/PublishAndDdownload.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/user/ArticleRelated.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="103" column="46" selection-start-line="103" selection-start-column="46" selection-end-line="103" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="135">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/serviceImpl/shared/SharedImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapperXml/ArticleMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="77">
-          <caret line="38" column="65" selection-start-line="38" selection-start-column="65" selection-end-line="38" selection-end-column="65" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="241">
+          <caret line="47" column="55" selection-start-line="47" selection-start-column="55" selection-end-line="47" selection-end-column="55" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/util/ResponseBean.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/mapper/ArticleMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="28" column="69" selection-start-line="28" selection-start-column="57" selection-end-line="28" selection-end-column="69" />
+        <state relative-caret-position="435">
+          <caret line="32" column="24" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/messages/HomePage.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/serviceImpl/user/ArticleRelatedImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="13" column="17" lean-forward="true" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+        <state relative-caret-position="2070">
+          <caret line="153" column="21" lean-forward="true" selection-start-line="153" selection-start-column="21" selection-end-line="153" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/bean/Article.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/user/ArticleRelatedC.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="22" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#711#712#0" expanded="true" />
-            <element signature="e#736#737#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/validation.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="44" lean-forward="true" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/exception/solveException/GlobalExcetion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="116" column="35" selection-start-line="116" selection-start-column="35" selection-end-line="116" selection-end-column="35" />
+        <state relative-caret-position="158">
+          <caret line="49" column="75" selection-start-line="49" selection-start-column="65" selection-end-line="49" selection-end-column="75" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

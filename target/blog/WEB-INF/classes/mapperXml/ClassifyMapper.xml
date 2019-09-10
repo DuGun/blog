@@ -11,6 +11,13 @@
   <sql id="Base_Column_List">
     id, article_sum, read_sun, comments_sun, classify_name
   </sql>
+
+  <select id="getClassifyAll" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from classify
+  </select>
+
   <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />

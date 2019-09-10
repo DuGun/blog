@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.BloggerMapper">
+  <resultMap id="BaseResultMap" type="bean.Blogger">
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="bogger_name" jdbcType="CHAR" property="boggerName" />
+    <result column="head" jdbcType="VARCHAR" property="head" />
+    <result column="contact" jdbcType="VARCHAR" property="contact" />
+    <result column="introduction" jdbcType="VARCHAR" property="introduction" />
+  </resultMap>
+
+  <select id="getBlogger" resultMap="BaseResultMap">
+    select bogger_name, head, contact, introduction
+    from blogger
+  </select>
+
+
+  <insert id="insert" parameterType="bean.Blogger">
+    insert into blogger (password, bogger_name, head, 
+      contact, introduction)
+    values (#{password,jdbcType=VARCHAR}, #{boggerName,jdbcType=CHAR}, #{head,jdbcType=VARCHAR}, 
+      #{contact,jdbcType=VARCHAR}, #{introduction,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="bean.Blogger">
+    insert into blogger
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="password != null">
+        password,
+      </if>
+      <if test="boggerName != null">
+        bogger_name,
+      </if>
+      <if test="head != null">
+        head,
+      </if>
+      <if test="contact != null">
+        contact,
+      </if>
+      <if test="introduction != null">
+        introduction,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="password != null">
+        #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="boggerName != null">
+        #{boggerName,jdbcType=CHAR},
+      </if>
+      <if test="head != null">
+        #{head,jdbcType=VARCHAR},
+      </if>
+      <if test="contact != null">
+        #{contact,jdbcType=VARCHAR},
+      </if>
+      <if test="introduction != null">
+        #{introduction,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+
+  <update id="update" parameterType="bean.Blogger">
+    update blogger
+    <trim prefix="set"  suffixOverrides=",">
+      <if test="password != null">
+        password=#{password,jdbcType=VARCHAR},
+      </if>
+      <if test="boggerName != null">
+        boggerName= #{boggerName,jdbcType=CHAR},
+      </if>
+      <if test="head != null">
+        head=#{head,jdbcType=VARCHAR},
+      </if>
+      <if test="contact != null">
+        contact=#{contact,jdbcType=VARCHAR},
+      </if>
+      <if test="introduction != null">
+        introduction= #{introduction,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </update>
+</mapper>

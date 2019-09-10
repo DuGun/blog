@@ -1,6 +1,14 @@
 package bean;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+
+/**
+ * 文章分类
+ */
 public class Classify {
+
+    @NotNull(message = "{validation_classify_parameter_message}")
     private long id;
 
     private int articleSum;
@@ -9,6 +17,7 @@ public class Classify {
 
     private int commentsSun;
 
+    @NotBlank(message = "{validation_classify_parameter_message}")
     private String classifyName;
 
     public long getId() {

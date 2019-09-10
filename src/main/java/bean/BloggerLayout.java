@@ -1,5 +1,8 @@
 package bean;
 
+/**
+ * 状态对象
+ */
 public class BloggerLayout  {
     private String tableName;
 
@@ -9,12 +12,13 @@ public class BloggerLayout  {
 
     private long fiexdPlace;
 
+
     public String getTableName() {
         return tableName;
     }
 
     public void setTableName(String tableName) {
-        this.tableName = tableName == null ? null : tableName.trim();
+        this.tableName = tableName;
     }
 
     public long getFiexdContentId() {

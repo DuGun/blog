@@ -1,11 +1,17 @@
 package util;
 
 import org.apache.commons.codec.binary.Hex;
+import org.junit.Test;
 
 import java.security.MessageDigest;
 import java.util.Random;
 import java.util.UUID;
 
+/**
+ * @author 脐橙
+ * @data 2019-09-05 20:30
+ * @Email 847033093@qq.com
+ */
 public class PasswordUtil {
 
     public static final String DEFAULT_PASSWORD="123456789";
@@ -83,5 +89,16 @@ public class PasswordUtil {
         }
         String Salt = new String(cs2);
         return md5Hex(password + Salt).equals(String.valueOf(cs1));
+    }
+
+    @Test
+    public void s(){
+        String ss="960808";
+
+        String xixi=PasswordUtil.getSaltMD5(ss);
+
+        System.out.println(xixi);
+
+        System.out.println(PasswordUtil.getSaltverifyMD5(ss,xixi));
     }
 }

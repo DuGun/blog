@@ -6,25 +6,31 @@ import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import java.util.Date;
+
+/**
+ * 文章
+ */
 public class Article {
     private long id;
 
     private long classifyId;
 
     //标题
-    @NotBlank(message = "{article_title_null_message}")
-    @Length(min = 1,max = 40,message = "{article_title_length_message}")
+    @NotBlank(message = "{validation_article_title_length_message}")
+    @Length(max = 40,message = "{validation_article_title_length_message}")
     private String title;
 
     private String contentUrl;
 
     private Date time;
 
-    @Min(value = 0,message = "{article_status_message}")
-    @Max(value = 2,message = "{article_status_message}")
+    @Min(value = 0,message = "{validation_article_status_message}")
+    @Max(value = 2,message = "{validation_article_status_message}")
     private int status;
 
     private String thumbnailUrl;
+
+    private String introduction;
 
     public long getId() {
         return id;
@@ -80,5 +86,13 @@ public class Article {
 
     public void setThumbnailUrl(String thumbnailUrl) {
         this.thumbnailUrl = thumbnailUrl == null ? null : thumbnailUrl.trim();
+    }
+
+    public String getIntroduction() {
+        return introduction;
+    }
+
+    public void setIntroduction(String introduction) {
+        this.introduction = introduction == null ? null : introduction.trim();
     }
 }

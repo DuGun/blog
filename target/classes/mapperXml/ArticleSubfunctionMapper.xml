@@ -2,34 +2,44 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="mapper.ArticleSubfunctionMapper">
   <resultMap id="BaseResultMap" type="bean.ArticleSubfunction">
-    <id column="article_id" jdbcType="BIGINT" property="articleId" />
+    <id column="article_subfunction_id" jdbcType="BIGINT" property="articleSubfunctionId" />
+    <result column="article_id" jdbcType="BIGINT" property="articleId" />
     <result column="read_sum" jdbcType="INTEGER" property="readSum" />
     <result column="comments_sum" jdbcType="INTEGER" property="commentsSum" />
     <result column="good" jdbcType="INTEGER" property="good" />
   </resultMap>
   <sql id="Base_Column_List">
-    article_id, read_sum, comments_sum, good
+    article_subfunction_id, article_id, read_sum, comments_sum, good
   </sql>
-
   <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
-    select 
+    select
+    <include refid="Base_Column_List" />
+    from article_subfunction
+    where article_subfunction_id = #{articleSubfunctionId,jdbcType=BIGINT}
+  </select>
+  
+  <select id="selectByPrimaryArticleId" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select
     <include refid="Base_Column_List" />
     from article_subfunction
     where article_id = #{articleId,jdbcType=BIGINT}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
     delete from article_subfunction
-    where article_id = #{articleId,jdbcType=BIGINT}
+    where article_subfunction_id = #{articleSubfunctionId,jdbcType=BIGINT}
   </delete>
   <insert id="insert" parameterType="bean.ArticleSubfunction">
-    insert into article_subfunction (article_id, read_sum, comments_sum, 
-      good)
-    values (#{articleId,jdbcType=BIGINT}, #{readSum,jdbcType=INTEGER}, #{commentsSum,jdbcType=INTEGER}, 
-      #{good,jdbcType=INTEGER})
+    insert into article_subfunction (article_subfunction_id, article_id, read_sum,
+      comments_sum, good)
+    values (#{articleSubfunctionId,jdbcType=BIGINT}, #{articleId,jdbcType=BIGINT}, #{readSum,jdbcType=INTEGER},
+      #{commentsSum,jdbcType=INTEGER}, #{good,jdbcType=INTEGER})
   </insert>
   <insert id="insertSelective" parameterType="bean.ArticleSubfunction">
     insert into article_subfunction
     <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="articleSubfunctionId != null">
+        article_subfunction_id,
+      </if>
       <if test="articleId != null">
         article_id,
       </if>
@@ -44,6 +54,9 @@
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="articleSubfunctionId != null">
+        #{articleSubfunctionId,jdbcType=BIGINT},
+      </if>
       <if test="articleId != null">
         #{articleId,jdbcType=BIGINT},
       </if>
@@ -61,6 +74,9 @@
   <update id="updateByPrimaryKeySelective" parameterType="bean.ArticleSubfunction">
     update article_subfunction
     <set>
+      <if test="articleId != null">
+        article_id = #{articleId,jdbcType=BIGINT},
+      </if>
       <if test="readSum != null">
         read_sum = #{readSum,jdbcType=INTEGER},
       </if>
@@ -71,13 +87,14 @@
         good = #{good,jdbcType=INTEGER},
       </if>
     </set>
-    where article_id = #{articleId,jdbcType=BIGINT}
+    where article_subfunction_id = #{articleSubfunctionId,jdbcType=BIGINT}
   </update>
   <update id="updateByPrimaryKey" parameterType="bean.ArticleSubfunction">
     update article_subfunction
-    set read_sum = #{readSum,jdbcType=INTEGER},
+    set article_id = #{articleId,jdbcType=BIGINT},
+      read_sum = #{readSum,jdbcType=INTEGER},
       comments_sum = #{commentsSum,jdbcType=INTEGER},
       good = #{good,jdbcType=INTEGER}
-    where article_id = #{articleId,jdbcType=BIGINT}
+    where article_subfunction_id = #{articleSubfunctionId,jdbcType=BIGINT}
   </update>
 </mapper>

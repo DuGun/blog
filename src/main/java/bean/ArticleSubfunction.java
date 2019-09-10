@@ -1,6 +1,14 @@
 package bean;
 
+import javax.validation.constraints.NotNull;
+
+/**
+ * 文章附加功能
+ */
 public class ArticleSubfunction {
+    private long articleSubfunctionId;
+
+    @NotNull(message = "{validation_article_subfunction_null_message}")
     private long articleId;
 
     private int readSum;
@@ -8,6 +16,14 @@ public class ArticleSubfunction {
     private int commentsSum;
 
     private int good;
+
+    public long getArticleSubfunctionId() {
+        return articleSubfunctionId;
+    }
+
+    public void setArticleSubfunctionId(long articleSubfunctionId) {
+        this.articleSubfunctionId = articleSubfunctionId;
+    }
 
     public long getArticleId() {
         return articleId;

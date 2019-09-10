@@ -9,6 +9,13 @@
   <sql id="Base_Column_List">
     id, content, time
   </sql>
+
+  <select id="getWords" resultMap="BaseResultMap" >
+    select
+    <include refid="Base_Column_List" />
+    from words
+    ORDER BY  time ASC
+  </select>
   <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />

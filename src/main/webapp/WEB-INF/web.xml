@@ -35,38 +35,34 @@
         <filter-class>org.springframework.web.filter.HiddenHttpMethodFilter</filter-class>
     </filter>
 
-    <!--CoresFilter-->
+
+    <!--  提供跨域支持 -->
     <filter>
-        <filter-name>core</filter-name>
-        <filter-class>filter.CorsFilter</filter-class>
+        <filter-name>CORS</filter-name>
+        <filter-class>com.thetransactioncompany.cors.CORSFilter</filter-class>
         <init-param>
-            <!--设置多个IP/域名等请用逗号分割-->
-            <param-name>allowOrigin</param-name>
+            <param-name>cors.allowOrigin</param-name>   <!--配置授信的白名单的域名！ -->
             <param-value>*</param-value>
         </init-param>
         <init-param>
-            <!--设置多个请求方式等请用逗号分割 POST, GET, OPTIONS, DELETE-->
-            <param-name>allowMethods</param-name>
-            <param-value>GET,POST,PUT,DELETE,OPTIONS</param-value>
+            <param-name>cors.supportedMethods</param-name>
+            <param-value>GET, POST, HEAD, PUT, DELETE</param-value>
         </init-param>
         <init-param>
-            <param-name>allowCredentials</param-name>
-            <param-value>true</param-value>
+            <param-name>cors.supportedHeaders</param-name>
+            <param-value>Accept, Origin, X-Requested-With, Content-Type, Last-Modified</param-value>
         </init-param>
         <init-param>
-            <!--设置多个内容格式请用逗号分割-->
-            <param-name>allowHeaders</param-name>
-            <param-value>Content-Type</param-value>
-        </init-param>
-        <init-param>
-            <param-name>maxAge</param-name>
-            <param-value>3600</param-value>
-        </init-param>
-        <init-param>
-            <param-name>exposeHeaders</param-name>
+            <param-name>cors.exposedHeaders</param-name>
             <param-value>Set-Cookie</param-value>
         </init-param>
+        <init-param>
+            <param-name>cors.supportsCredentials</param-name>
+            <param-value>true</param-value>
+        </init-param>
     </filter>
+
+
 
 
     <!--Shrio-->
@@ -80,6 +76,11 @@
         </init-param>
     </filter>
 
+
+<!--    <filter-mapping>-->
+<!--        <filter-name>CORS</filter-name>-->
+<!--        <url-pattern>/*</url-pattern>-->
+<!--    </filter-mapping>-->
 
     <filter-mapping>
         <filter-name>encodingFilter</filter-name>
@@ -96,10 +97,7 @@
         <url-pattern>/*</url-pattern>
     </filter-mapping>
 
-    <filter-mapping>
-        <filter-name>core</filter-name>
-        <url-pattern>/*</url-pattern>
-    </filter-mapping>
+
 
 
     <!-- Spring监听器 加载父容器-->

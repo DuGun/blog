@@ -1,26 +1,40 @@
 package exception.customException;
 
-//文件格式不在接受范围异常
-public class FileTypeException extends RuntimeException {
+/**
+ * @author 脐橙
+ * @data 2019-09-05 20:30
+ * @Email 847033093@qq.com
+ *
+ * 文件格式不在接受范围内异常
+ */
+public class FileTypeException extends Exception {
 
-    private String message;
+    private String typemessage;
 
     private FileTypeException() {
         super();
     }
 
-    private FileTypeException(Throwable cause) {
+    public FileTypeException(Throwable cause) {
         super(cause);
 
     }
 
-    public FileTypeException(String typeMessage) {
-        super(typeMessage);
+    public FileTypeException(String supportTypeMes) {
+        super(supportTypeMes);
+        typemessage=supportTypeMes;
     }
 
-    public FileTypeException(String typeMessage, Throwable cause) {
-        super(typeMessage, cause);
+    public FileTypeException(String supportType, Throwable cause) {
+        super(supportType, cause);
+        typemessage=supportType;
     }
 
+    public String getTypemessage() {
+        return typemessage;
+    }
 
+    public void setTypemessage(String typemessage) {
+        this.typemessage = typemessage;
+    }
 }

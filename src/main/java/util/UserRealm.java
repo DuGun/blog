@@ -17,6 +17,12 @@ import java.io.Serializable;
  * 自定义ShiroRealm
  * 2019-4-3
  */
+
+/**
+ * @author 脐橙
+ * @data 2019-09-05 20:30
+ * @Email 847033093@qq.com
+ */
 public class UserRealm extends AuthorizingRealm implements Serializable {
 
     private static Logger logger = LoggerFactory.getLogger(UserRealm.class);

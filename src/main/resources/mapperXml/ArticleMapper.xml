@@ -1,119 +1,198 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="mapper.ArticleMapper">
-  <resultMap id="BaseResultMap" type="bean.Article">
-    <id column="id" jdbcType="BIGINT" property="id" />
-    <result column="classify_id" jdbcType="BIGINT" property="classifyId" />
-    <result column="title" jdbcType="VARCHAR" property="title" />
-    <result column="content_url" jdbcType="VARCHAR" property="contentUrl" />
-    <result column="time" jdbcType="TIMESTAMP" property="time" />
-    <result column="status" jdbcType="INTEGER" property="status" />
-    <result column="thumbnail_url" jdbcType="VARCHAR" property="thumbnailUrl" />
-  </resultMap>
-  <sql id="Base_Column_List">
-    id, classify_id, title, content_url, time, status, thumbnail_url
+    <resultMap id="BaseResultMap" type="bean.Article">
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="classify_id" jdbcType="BIGINT" property="classifyId"/>
+        <result column="title" jdbcType="CHAR" property="title"/>
+        <result column="content_url" jdbcType="VARCHAR" property="contentUrl"/>
+        <result column="time" jdbcType="TIMESTAMP" property="time"/>
+        <result column="status" jdbcType="INTEGER" property="status"/>
+        <result column="thumbnail_url" jdbcType="VARCHAR" property="thumbnailUrl"/>
+        <result column="introduction" jdbcType="VARCHAR" property="introduction"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    id, classify_id, title, content_url, time, status, thumbnail_url, introduction
   </sql>
 
 
-  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
-    select 
-    <include refid="Base_Column_List" />
-    from article
-    where id = #{id,jdbcType=BIGINT}
-  </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from article
+        where id = #{arg0,jdbcType=BIGINT} and status =#{arg1,jdbcType=INTEGER}
+    </select>
+
+
+    <select id="getAllArticle"  parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from article
+        <where>
+            status=#{status}
+        </where>ORDER BY time desc
+    </select>
+
+    <select id="selectByIds" resultMap="BaseResultMap" parameterType="java.util.List">
+        select
+        <include refid="Base_Column_List"/>
+        from article
+        <where>
+            id in
+            <foreach collection="array" item="item" open="(" close=")" separator=",">
+                #{item}
+            </foreach>
+        </where>
+    </select>
+
+    <select id="count" parameterType="java.lang.Integer" resultType="java.lang.Integer">
+        SELECT COUNT(*) FROM article
+        <where>
+            status = #{status}
+        </where>
+    </select>
+
+    <select id="selectAllExcludeArticle" resultMap="BaseResultMap" parameterType="java.util.List">
+        select
+        <include refid="Base_Column_List"/>
+        from article
+        <where>
+            status =#{arg1}
+            and
+            <foreach collection="arg0" item="articleId" index="index" separator="and">
+                id<![CDATA[ <> ]]>#{articleId}
+            </foreach>
+            ORDER BY time desc
+        </where>
+    </select>
+
+
+    <select id="excludeAndLimitQuantities" resultMap="BaseResultMap" parameterType="java.util.Map">
+        select
+        <include refid="Base_Column_List"/>
+        from article
+        <where>
+            <foreach collection="excludeArticle" item="articleId" index="index" separator="and">
+                id<![CDATA[ <> ]]>#{articleId}
+            </foreach>
+            ORDER BY time desc
+        </where>
+        status=#{status}
+        LIMIT #{limitNum}
+    </select>
+
+    <select id="getArticleLimitQuantities" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from article LIMIT #{limit}
+    </select>
+
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
     delete from article
     where id = #{id,jdbcType=BIGINT}
   </delete>
-  <insert id="insert" parameterType="bean.Article">
-    insert into article (id, classify_id, title, 
-      content_url, time, status, 
-      thumbnail_url)
-    values (#{id,jdbcType=BIGINT}, #{classifyId,jdbcType=BIGINT}, #{title,jdbcType=VARCHAR}, 
-      #{contentUrl,jdbcType=VARCHAR}, #{time,jdbcType=TIMESTAMP}, #{status,jdbcType=INTEGER}, 
-      #{thumbnailUrl,jdbcType=VARCHAR})
+
+    <insert id="insert" parameterType="bean.Article">
+    insert into article (id, classify_id, title,
+      content_url, time, status,
+      thumbnail_url, introduction)
+    values (#{id,jdbcType=BIGINT}, #{classifyId,jdbcType=BIGINT}, #{title,jdbcType=CHAR},
+      #{contentUrl,jdbcType=VARCHAR}, #{time,jdbcType=TIMESTAMP}, #{status,jdbcType=INTEGER},
+      #{thumbnailUrl,jdbcType=VARCHAR}, #{introduction,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="bean.Article">
-    insert into article
-    <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="id != null">
-        id,
-      </if>
-      <if test="classifyId != null">
-        classify_id,
-      </if>
-      <if test="title != null">
-        title,
-      </if>
-      <if test="contentUrl != null">
-        content_url,
-      </if>
-      <if test="time != null">
-        time,
-      </if>
-      <if test="status != null">
-        status,
-      </if>
-      <if test="thumbnailUrl != null">
-        thumbnail_url,
-      </if>
-    </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="id != null">
-        #{id,jdbcType=BIGINT},
-      </if>
-      <if test="classifyId != null">
-        #{classifyId,jdbcType=BIGINT},
-      </if>
-      <if test="title != null">
-        #{title,jdbcType=VARCHAR},
-      </if>
-      <if test="contentUrl != null">
-        #{contentUrl,jdbcType=VARCHAR},
-      </if>
-      <if test="time != null">
-        #{time,jdbcType=TIMESTAMP},
-      </if>
-      <if test="status != null">
-        #{status,jdbcType=INTEGER},
-      </if>
-      <if test="thumbnailUrl != null">
-        #{thumbnailUrl,jdbcType=VARCHAR},
-      </if>
-    </trim>
-  </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="bean.Article">
-    update article
-    <set>
-      <if test="classifyId != null">
-        classify_id = #{classifyId,jdbcType=BIGINT},
-      </if>
-      <if test="title != null">
-        title = #{title,jdbcType=VARCHAR},
-      </if>
-      <if test="contentUrl != null">
-        content_url = #{contentUrl,jdbcType=VARCHAR},
-      </if>
-      <if test="time != null">
-        time = #{time,jdbcType=TIMESTAMP},
-      </if>
-      <if test="status != null">
-        status = #{status,jdbcType=INTEGER},
-      </if>
-      <if test="thumbnailUrl != null">
-        thumbnail_url = #{thumbnailUrl,jdbcType=VARCHAR},
-      </if>
-    </set>
-    where id = #{id,jdbcType=BIGINT}
-  </update>
-  <update id="updateByPrimaryKey" parameterType="bean.Article">
+    <insert id="insertSelective" parameterType="bean.Article">
+        insert into article
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="classifyId != null">
+                classify_id,
+            </if>
+            <if test="title != null">
+                title,
+            </if>
+            <if test="contentUrl != null">
+                content_url,
+            </if>
+            <if test="time != null">
+                time,
+            </if>
+            <if test="status != null">
+                status,
+            </if>
+            <if test="thumbnailUrl != null">
+                thumbnail_url,
+            </if>
+            <if test="introduction != null">
+                introduction,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=BIGINT},
+            </if>
+            <if test="classifyId != null">
+                #{classifyId,jdbcType=BIGINT},
+            </if>
+            <if test="title != null">
+                #{title,jdbcType=CHAR},
+            </if>
+            <if test="contentUrl != null">
+                #{contentUrl,jdbcType=VARCHAR},
+            </if>
+            <if test="time != null">
+                #{time,jdbcType=TIMESTAMP},
+            </if>
+            <if test="status != null">
+                #{status,jdbcType=INTEGER},
+            </if>
+            <if test="thumbnailUrl != null">
+                #{thumbnailUrl,jdbcType=VARCHAR},
+            </if>
+            <if test="introduction != null">
+                #{introduction,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+
+    <update id="updateByPrimaryKeySelective" parameterType="bean.Article">
+        update article
+        <set>
+            <if test="classifyId != null">
+                classify_id = #{classifyId,jdbcType=BIGINT},
+            </if>
+            <if test="title != null">
+                title = #{title,jdbcType=CHAR},
+            </if>
+            <if test="contentUrl != null">
+                content_url = #{contentUrl,jdbcType=VARCHAR},
+            </if>
+            <if test="time != null">
+                time = #{time,jdbcType=TIMESTAMP},
+            </if>
+            <if test="status != null">
+                status = #{status,jdbcType=INTEGER},
+            </if>
+            <if test="thumbnailUrl != null">
+                thumbnail_url = #{thumbnailUrl,jdbcType=VARCHAR},
+            </if>
+            <if test="introduction != null">
+                introduction = #{introduction,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="bean.Article">
     update article
     set classify_id = #{classifyId,jdbcType=BIGINT},
-      title = #{title,jdbcType=VARCHAR},
+      title = #{title,jdbcType=CHAR},
       content_url = #{contentUrl,jdbcType=VARCHAR},
       time = #{time,jdbcType=TIMESTAMP},
       status = #{status,jdbcType=INTEGER},
-      thumbnail_url = #{thumbnailUrl,jdbcType=VARCHAR}
+      thumbnail_url = #{thumbnailUrl,jdbcType=VARCHAR},
+      introduction = #{introduction,jdbcType=VARCHAR}
     where id = #{id,jdbcType=BIGINT}
   </update>
 </mapper>

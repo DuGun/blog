@@ -1,8 +1,15 @@
 package bean;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import java.util.Date;
 
+/**
+ * 背景图
+ */
 public class Background {
+
+    @NotNull(message = "{validation_background_parameter_message}")
     private long id;
 
     private String url;

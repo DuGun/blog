@@ -8,6 +8,12 @@ import org.springframework.stereotype.Component;
  * 那我们要保证每次返回的格式都是相同的，
  * 因此建立了一个ResponseBean来统一返回的格式。
  */
+
+/**
+ * @author 脐橙
+ * @data 2019-09-05 20:30
+ * @Email 847033093@qq.com
+ */
 @Component
 public class ResponseBean {
 

@@ -1,5 +1,8 @@
 package bean;
 
+/**
+ * 固定地点对象
+ */
 public class FixedLocation {
     private long fixedId;
 

@@ -1,13 +1,22 @@
 package bean;
 
+import org.hibernate.validator.constraints.Length;
+
+import javax.validation.constraints.NotBlank;
 import java.util.Date;
 
 public class Words {
     private long id;
 
+    @NotBlank(message = "参数不合法")
+    @Length(max = 250,message = "内容过长")
     private String content;
 
     private Date time;
+
+    public  Words(){
+        super();
+    }
 
     public long getId() {
         return id;

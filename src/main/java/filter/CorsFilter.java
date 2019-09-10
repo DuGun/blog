@@ -12,6 +12,12 @@ import java.io.IOException;
  * 处理跨域问题
  * 2019-4-3
  */
+
+/**
+ * @author 脐橙
+ * @data 2019-09-05 20:30
+ * @Email 847033093@qq.com
+ */
 public class CorsFilter implements Filter {
 
     private static final Logger logger = LoggerFactory.getLogger(CorsFilter.class);

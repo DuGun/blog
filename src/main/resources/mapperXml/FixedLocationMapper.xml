@@ -1,36 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="mapper.FixedLocationMapper">
-  <resultMap id="BaseResultMap" type="bean.FixedLocation">
-    <id column="fixed_id" jdbcType="BIGINT" property="fixedId" />
-    <id column="fixed_name" jdbcType="VARCHAR" property="fixedName" />
-  </resultMap>
-  <delete id="deleteByPrimaryKey" parameterType="bean.FixedLocation">
+    <resultMap id="BaseResultMap" type="bean.FixedLocation">
+        <id column="fixed_id" jdbcType="BIGINT" property="fixedId"/>
+        <id column="fixed_name" jdbcType="VARCHAR" property="fixedName"/>
+    </resultMap>
+
+    <select id="selectbyName" resultMap="BaseResultMap" parameterType="java.lang.String">
+    select * from fixed_location where fixed_name =#{fixedName,jdbcType=VARCHAR}
+  </select>
+
+    <delete id="deleteByPrimaryKey" parameterType="bean.FixedLocation">
     delete from fixed_location
     where fixed_id = #{fixedId,jdbcType=BIGINT}
       and fixed_name = #{fixedName,jdbcType=VARCHAR}
   </delete>
-  <insert id="insert" parameterType="bean.FixedLocation">
+    <insert id="insert" parameterType="bean.FixedLocation">
     insert into fixed_location (fixed_id, fixed_name)
     values (#{fixedId,jdbcType=BIGINT}, #{fixedName,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="bean.FixedLocation">
-    insert into fixed_location
-    <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="fixedId != null">
-        fixed_id,
-      </if>
-      <if test="fixedName != null">
-        fixed_name,
-      </if>
-    </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="fixedId != null">
-        #{fixedId,jdbcType=BIGINT},
-      </if>
-      <if test="fixedName != null">
-        #{fixedName,jdbcType=VARCHAR},
-      </if>
-    </trim>
-  </insert>
+    <insert id="insertSelective" parameterType="bean.FixedLocation">
+        insert into fixed_location
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="fixedId != null">
+                fixed_id,
+            </if>
+            <if test="fixedName != null">
+                fixed_name,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="fixedId != null">
+                #{fixedId,jdbcType=BIGINT},
+            </if>
+            <if test="fixedName != null">
+                #{fixedName,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
 </mapper>

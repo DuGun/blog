@@ -1,6 +1,13 @@
 package bean;
 
+import javax.validation.constraints.NotBlank;
+
+/**
+ * 用户表
+ */
 public class User {
+//    @NotBlank(message = "{validation_email_rules_message}")
+    //后续加上正则表达式
     private String email;
 
     private String head;

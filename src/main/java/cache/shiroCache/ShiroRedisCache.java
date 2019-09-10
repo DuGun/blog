@@ -20,6 +20,13 @@ import util.JwtUtil;
 import java.util.Collection;
 import java.util.Set;
 
+
+/**
+ * @author 脐橙
+ * @data 2019-09-05 20:30
+ * @Email 847033093@qq.com
+ */
+
 /**
  * Shiro使用Redis缓存
  * 该接口负责实际的缓存逻辑

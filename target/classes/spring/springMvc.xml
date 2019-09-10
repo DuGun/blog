@@ -8,15 +8,14 @@
        http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
     <!--这里为子容器-->
 
-
     <!--扫描器-->
     <context:component-scan base-package="controller"/>
 
-    <!--配置文件-->
-    <bean id="propertyConfigurer2" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+    <!--加载配置文件-->
+    <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
         <property name="locations">
             <list>
-
+                <value>classpath:storeProperties/projectFile.properties</value>
             </list>
         </property>
     </bean>
@@ -70,7 +69,7 @@
         </property>
         <property name="defaultEncoding" value="UTF-8"/>
         <!-- 对资源文件内容缓存时间，单位为：秒 -->
-        <property name="cacheSeconds" value="60"/>
+        <property name="cacheSeconds" value="120"/>
     </bean>
 
     <!--校验返回值-->
@@ -81,7 +80,11 @@
     <!--上传文件-->
     <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
         <property name="defaultEncoding" value="UTF-8"/>
-        <property name="maxUploadSize" value="10000000"/>
+        <property name="maxUploadSize" value="104857000000"/>
+        <!-- 内存中的最大值 -->
+        <property name="maxInMemorySize" value="40960"/>
+        <!-- 启用是为了推迟文件解析，以便捕获文件大小异常 -->
+        <property name="resolveLazily" value="true"/>
     </bean>
 
 </beans>

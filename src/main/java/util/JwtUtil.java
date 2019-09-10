@@ -24,6 +24,12 @@ import java.util.Map;
  * JWT工具
  * 2019-3-31
  */
+
+/**
+ * @author 脐橙
+ * @data 2019-09-05 20:30
+ * @Email 847033093@qq.com
+ */
 public class JwtUtil {
     /**
      * 创建一个32-byte的密匙
