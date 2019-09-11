@@ -11,14 +11,25 @@
 <br/>
 <h1>后台所用的技术</h1>
 <ul>
-<li>SSM</li>
-<li>MySql</li>
-<li>Redis</li>
-  <li>Shiro</li>
-  <li>validation</li>
+<li>SSM框架</li>
+<li>MySql数据库</li>
+<li>Redis缓存数据库</li>
+  <li>Shiro权限框架</li>
+  <li>validation校验框架</li>
   <li>ToKen</li>
   <li>雪花算法生成ID</li>
+  <li>FileUtils</li>
+  <li>FilenameUtils</li>
 </ul>
+<br/>
+<h1>遇到的问题</h1>
+<ul>
+  <li>单/多文件上传存在不定性：可以通过将Request强转成MultipartHttpServletRequest，然后通过getFiles方法进行获取</li>
+  <li>使用validation校验框架时使用@RequestBody导致不是抛出BindException，而是MethodArgumentNotValidException，其次就是获取异常信息。</li>
+  <li>上一个demo项目中在使用Redis进行缓存Shiro权限类还是角色类出现复杂对象无法正常反序列化：使用Gson进行自定义反序列化</li>
+  <li>使用JDK8新日期API中解决并发可能出现的时间问题</li>
+</ul>
+
 
 <br/>
 <br/>
