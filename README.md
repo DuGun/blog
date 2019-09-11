@@ -28,6 +28,7 @@
   <li>使用validation校验框架时使用@RequestBody导致不是抛出BindException，而是MethodArgumentNotValidException，其次就是获取异常信息。</li>
   <li>上一个demo项目中在使用Redis进行缓存Shiro权限类还是角色类出现复杂对象无法正常反序列化：使用Gson进行自定义反序列化</li>
   <li>使用JDK8新日期API中解决并发可能出现的时间问题</li>
+  <li>在阿里学生服务器中出现MySQL数据库出现全库被抹：至于原因暂时不知道</li>
 </ul>
 
 
